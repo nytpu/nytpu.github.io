@@ -1,0 +1,27 @@
+html {
+  background-color: #FEFEFE;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #454545;
+  font-size: 16px;
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+a {
+  color: #07A;
+}
+a:visited {
+  color: #941352;
+}
+small {
+  font-size: 0.5em;
+}
+@media screen and (max-width: 500px) {
+  body {
+    text-align: left;
+  }
+}

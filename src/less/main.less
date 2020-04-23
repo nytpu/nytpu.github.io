@@ -1,0 +1,38 @@
+@body-background-color: #FEFEFE;
+@body-text-color: #454545;
+
+@link-color: #07A;
+@link-visited-color: #941352;
+
+html {
+  background-color: @body-background-color;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: @body-text-color;
+  font-size: 16px;
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+a {
+  color: @link-color; 
+}
+
+a:visited {
+  color: @link-visited-color;
+}
+
+small {
+  font-size: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    text-align: left;
+  }
+}
