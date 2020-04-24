@@ -34,7 +34,6 @@ div.sidebar a#selected {
 }
 div.content {
   color: #454545;
-  font-size: 16px;
   margin: 2em auto;
   max-width: 800px;
   padding: 1em;
@@ -59,4 +58,10 @@ small {
   font-size: 0.8125rem;
   color: #666666;
   text-align: center;
+}
+.footer a {
+  color: #666666;
+}
+.footer a:visited {
+  color: #666666;
 }

@@ -6,4 +6,23 @@ block prepend head
 
 block content
   h1 About
-  h2 Hello
+  p Hello, stuff goes here
+
+  hr
+  h2 Copyright
+  p Unless otherwise noted, all content is © #{year} Alex Gentilucci and is licensed under the following terms:
+    p.
+      #[a(rel='license' href='http://www.wtfpl.net/') #[img(src='img/wtfpl.png' alt='WTFPL')]]<br/>
+      The source code and visual design of this website is covered by the #[a(rel='license' href='http://www.wtfpl.net') WTFPL]. The source code is publicly avalaible on #[a(href='https://github.com/nytpu/nytpu.github.io') GitHub].
+    p.
+      #[a(rel='license' href='http://creativecommons.org/licenses/by/4.0/') #[img(src='img/creativecommons.png' alt='Creative Commons License')]]<br/>
+      All content on this website, excluding the visual design, is covered by the #[a(rel='license' href='http://creativecommons.org/licenses/by/4.0/') Creative Commons Attribution 4.0 International License].
+    p.
+      The visual design of this website is #[em based off of] #[a(href='https://thebestmotherfucking.website/') thebestmotherfuckingwebsite], which is covered by the #[a(rel='license' href='http://www.wtfpl.net') WTFPL]. The visual design of this website is also covered by the WTFPL, as mentioned previously.
+    p.
+      The font used is #[a(href='https://fonts.google.com/specimen/Open+Sans') Open Sans by Steve Matteson] and is covered by the #[a(href='http://www.apache.org/licenses/LICENSE-2.0') Apache License, Version 2.0.]
+    p.
+      Any content that is not included in the antecedent terms have All Rights Reserved.
+
+block footer
+  p This website uses #[a(href='http://www.vanilla-js.com/') #[img(src='img/vanillajs.png' alt='VanillaJS')]]

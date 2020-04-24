@@ -1,5 +1,13 @@
 include sidebar
 
+- var production = true
+
+- var year = new Date().getFullYear()
+if production
+  - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects"}
+else
+  - var entries = {"Home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "About": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "Projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects.html"}
+
 doctype html
 html(lang=en)
   head
@@ -17,5 +25,10 @@ html(lang=en)
     +sidebar(current)
     div.content
       block content
+
+    div.footer
+      // Redefine block footer in extends file to allow chaniging footer content.
+      block footer
+        p © #{year} Alex Gentilucci. For additional copyright info see #[a(href=entries['About']) About].
 
     script(type='text/javascript', src='./js/main.js')

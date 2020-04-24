@@ -53,7 +53,7 @@ div.sidebar {
 
 div.content {
   color: @body-text-color;
-  font-size: 16px;
+  //font-size: 16px; // Don't set font size to help the user because browser settings
   margin: 2em auto;
   max-width: 800px;
   padding: 1em;
@@ -82,5 +82,12 @@ small {
   margin: 7rem auto 1rem;
   font-size: 0.8125rem;
   color: @footer-color;
+  a {
+    color: @footer-color; 
+
+    &:visited {
+      color: @footer-color;
+    }
+  }
   text-align: center;
 }
