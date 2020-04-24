@@ -5,6 +5,6 @@ mixin sidebar(current)
       li
         h2 
           a(href='https://www.nytpu.com/') nytpu.com
-      - for (name in entries)
+      each link, name in entries
         li
-          a(href=entries[name] id=current==name ? 'selected' : '') #{name}
+          a(href=link id=current==name ? 'selected' : '') #{name}
