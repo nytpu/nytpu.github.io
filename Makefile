@@ -6,6 +6,7 @@ JPG_OPTIM				:= jpegoptim
 SRC_DIR					:= src
 SRC_LESS_DIR 		:= $(SRC_DIR)/less
 SRC_PUG_DIR 		:= $(SRC_DIR)/pug
+SRC_PUG_INC_DIR	:= $(SRC_PUG_DIR)/include
 SRC_IMG_DIR 		:= $(SRC_DIR)/img
 SRC_JS_DIR			:= $(SRC_DIR)/js
 SRC_LESS				:= $(wildcard $(SRC_LESS_DIR)/*)
@@ -28,7 +29,7 @@ all: $(DST_CSS) $(DST_HTML) $(DST_IMG) $(DST_JS)
 $(DST_CSS_DIR)/%.css: $(SRC_LESS_DIR)/%.less
 	$(LESS) $< $@
 
-%.html: $(SRC_PUG_DIR)/%.pug
+%.html: $(SRC_PUG_DIR)/%.pug $(SRC_PUG_INC_DIR)/sidebar.pug
 	$(PUG) $< --out .
 
 $(DST_IMG_DIR)/%.png: $(SRC_IMG_DIR)/%.png

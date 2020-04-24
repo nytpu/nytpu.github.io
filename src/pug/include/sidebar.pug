@@ -1,0 +1,10 @@
+mixin sidebar(current)
+  - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects"}
+  .sidebar
+    ul
+      li
+        h2 
+          a(href='https://www.nytpu.com/') nytpu.com
+      - for (name in entries)
+        li
+          a(href=entries[name] id=current==name ? 'selected' : '') #{name}

@@ -1,7 +1,10 @@
+- var current = 'Home'
+include include/sidebar
+
 doctype html
 html(lang=en)
   head
-    title www.nytpu.com
+    title nytpu.com
 
     meta(charset='utf-8')
     meta(name='theme-color', content='#ffffff')
@@ -13,18 +16,7 @@ html(lang=en)
     link(rel='stylesheet', type='text/css', href='./css/main.css')
 
   body
-    div.sidebar
-      ul
-        li
-          h2 
-            a(href='https://www.nytpu.com/') nytpu.com
-        li
-          a(href='https://www.nytpu.com/') Home
-        li
-          a(href='https://www.nytpu.com/about') About
-        li
-          a(href='https://www.nytpu.com/projects') Projects
-
+    +sidebar(current)
     div.content
       h1 Hello, world!
       p test #[a(href='http://localtest.me') LOOOOONG test] Hello tooo

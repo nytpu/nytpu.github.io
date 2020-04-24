@@ -4,6 +4,7 @@
 @link-color: #07A;
 @link-visited-color: #941352;
 @link-sidebar-color: #525252;
+@link-sidebar-current-color: #212121;
 
 @footer-color: #666666;
 
@@ -42,6 +43,11 @@ div.sidebar {
     &:visited {
       color: @link-sidebar-color;
     }
+  }
+
+  a#selected {
+    color: @link-sidebar-current-color;
+    border-bottom: 1px solid @link-sidebar-current-color;
   }
 }
 

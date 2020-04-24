@@ -1,3 +1,6 @@
+- var current = 'About'
+include include/sidebar
+
 doctype html
 html(lang=en)
   head
@@ -13,18 +16,7 @@ html(lang=en)
     link(rel='stylesheet', type='text/css', href='./css/main.css')
 
   body
-    div.sidebar
-      ul
-        li
-          h2 
-            a(href='https://www.nytpu.com/') nytpu.com
-        li
-          a(href='https://www.nytpu.com/') Home
-        li
-          a(href='https://www.nytpu.com/about') About
-        li
-          a(href='https://www.nytpu.com/projects') Projects
-
+    +sidebar(current)
     div.content
       h1 About
       h2 Hello
