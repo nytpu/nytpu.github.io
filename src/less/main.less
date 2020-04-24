@@ -3,6 +3,9 @@
 
 @link-color: #07A;
 @link-visited-color: #941352;
+@link-sidebar-color: #525252;
+
+@footer-color: #666666;
 
 html {
   background-color: @body-background-color;
@@ -10,6 +13,39 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+div.sidebar {
+  position: fixed;
+  margin: auto 1.25em;
+  font-size: 18px;
+  line-height: 1.6;
+
+  h2 {
+    line-height: 1.4;
+  }  
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: @link-sidebar-color;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px dotted @link-sidebar-color;
+    }
+    
+    &:visited {
+      color: @link-sidebar-color;
+    }
+  }
+}
+
+div.content {
   color: @body-text-color;
   font-size: 16px;
   margin: 2em auto;
@@ -29,6 +65,14 @@ a:visited {
 
 small {
   font-size: 0.5em;
+}
+
+.footer {
+  width: 100%;
+  margin: 7rem auto 1rem;
+  font-size: 0.8125rem;
+  color: @footer-color;
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {

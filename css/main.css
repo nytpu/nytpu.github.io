@@ -3,6 +3,32 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+}
+div.sidebar {
+  position: fixed;
+  margin: auto 1.25em;
+  font-size: 18px;
+  line-height: 1.6;
+}
+div.sidebar h2 {
+  line-height: 1.4;
+}
+div.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.sidebar a {
+  color: #525252;
+  text-decoration: none;
+}
+div.sidebar a:hover {
+  border-bottom: 1px dotted #525252;
+}
+div.sidebar a:visited {
+  color: #525252;
+}
+div.content {
   color: #454545;
   font-size: 16px;
   margin: 2em auto;
@@ -19,6 +45,13 @@ a:visited {
 }
 small {
   font-size: 0.5em;
+}
+.footer {
+  width: 100%;
+  margin: 7rem auto 1rem;
+  font-size: 0.8125rem;
+  color: #666666;
+  text-align: center;
 }
 @media screen and (max-width: 500px) {
   body {
