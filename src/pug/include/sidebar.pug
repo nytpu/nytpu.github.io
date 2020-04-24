@@ -1,10 +1,15 @@
 mixin sidebar(current)
-  - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects"}
+  - var production = true
+  if production
+    - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects"}
+  else
+    - var entries = {"Home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "About": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "Projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects.html"}
+
   .sidebar
     ul
       li
         h2 
-          a(href='https://www.nytpu.com/') nytpu.com
+          a(href=entries['Home']) nytpu.com
       each link, name in entries
         li
           a(href=link id=current==name ? 'selected' : '') #{name}
