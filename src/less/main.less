@@ -17,8 +17,8 @@ body {
 }
 
 div.sidebar {
-  position: fixed;
-  margin: auto 1.25em;
+  float: left;
+  margin: auto 2em;
   font-size: 18px;
   line-height: 1.6;
 
@@ -43,11 +43,11 @@ div.sidebar {
     &:visited {
       color: @link-sidebar-color;
     }
-  }
 
-  a#selected {
-    color: @link-sidebar-current-color;
-    border-bottom: 1px solid @link-sidebar-current-color;
+    &#selected {
+      color: @link-sidebar-current-color;
+      border-bottom: 1px solid @link-sidebar-current-color;
+    }
   }
 }
 
@@ -63,15 +63,14 @@ div.content {
 
 a {
   color: @link-color; 
-}
 
-a:visited {
-  color: @link-visited-color;
+  &:visited {
+    color: @link-visited-color;
+  }
 }
 
 div#e404 {
   text-align: center;
-  margin:0 auto;
 }
 
 small {
@@ -84,10 +83,4 @@ small {
   font-size: 0.8125rem;
   color: @footer-color;
   text-align: center;
-}
-
-@media screen and (max-width: 500px) {
-  body {
-    text-align: left;
-  }
 }

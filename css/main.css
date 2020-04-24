@@ -5,8 +5,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 div.sidebar {
-  position: fixed;
-  margin: auto 1.25em;
+  float: left;
+  margin: auto 2em;
   font-size: 18px;
   line-height: 1.6;
 }
@@ -49,7 +49,6 @@ a:visited {
 }
 div#e404 {
   text-align: center;
-  margin: 0 auto;
 }
 small {
   font-size: 0.5em;
@@ -60,9 +59,4 @@ small {
   font-size: 0.8125rem;
   color: #666666;
   text-align: center;
-}
-@media screen and (max-width: 500px) {
-  body {
-    text-align: left;
-  }
 }
