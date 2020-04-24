@@ -29,7 +29,7 @@ all: $(DST_CSS) $(DST_HTML) $(DST_IMG) $(DST_JS)
 $(DST_CSS_DIR)/%.css: $(SRC_LESS_DIR)/%.less
 	$(LESS) $< $@
 
-%.html: $(SRC_PUG_DIR)/%.pug $(SRC_PUG_INC_DIR)/sidebar.pug
+%.html: $(SRC_PUG_DIR)/%.pug $(SRC_PUG_INC_DIR)/sidebar.pug $(SRC_PUG_INC_DIR)/layout.pug
 	$(PUG) $< --out .
 
 $(DST_IMG_DIR)/%.png: $(SRC_IMG_DIR)/%.png

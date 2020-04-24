@@ -1,24 +1,9 @@
-- var current = 'About'
-include include/sidebar
+extends include/layout.pug
 
-doctype html
-html(lang=en)
-  head
-    title www.nytpu.com/about
+block prepend head
+  - var current = 'About'
+  title nytpu.com/about
 
-    meta(charset='utf-8')
-    meta(name='theme-color', content='#ffffff')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='author', content='nytpu')
-    meta(name='description', content="nytpu's personal site")
-
-    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css2?family=Open+Sans')
-    link(rel='stylesheet', type='text/css', href='./css/main.css')
-
-  body
-    +sidebar(current)
-    div.content
-      h1 About
-      h2 Hello
-
-    script(type='text/javascript', src='./js/main.js')
+block content
+  h1 About
+  h2 Hello
