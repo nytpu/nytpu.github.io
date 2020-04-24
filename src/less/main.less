@@ -3,8 +3,12 @@
 
 @link-color: #07A;
 @link-visited-color: #941352;
+
 @link-sidebar-color: #525252;
-@link-sidebar-current-color: #212121;
+@link-sidebar-darken: 40%;
+
+@nav-color: #BABABA;
+@nav-color-darken: 15%;
 
 @footer-color: #666666;
 
@@ -45,8 +49,8 @@ div.sidebar {
     }
 
     &#selected {
-      color: @link-sidebar-current-color;
-      border-bottom: 1px solid @link-sidebar-current-color;
+      color: darken(@link-sidebar-color, @link-sidebar-darken);
+      border-bottom: 1px solid darken(@link-sidebar-color, @link-sidebar-darken);
     }
   }
 }
@@ -66,6 +70,18 @@ a {
 
   &:visited {
     color: @link-visited-color;
+  }
+}
+
+a.nav_back {
+  color: @nav-color;
+
+  &:visited {
+    color: @nav-color;
+  }
+
+  &:hover {
+    color: darken(@nav-color, @nav-color-darken);
   }
 }
 

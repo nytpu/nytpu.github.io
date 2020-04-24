@@ -29,8 +29,8 @@ div.sidebar a:visited {
   color: #525252;
 }
 div.sidebar a#selected {
-  color: #212121;
-  border-bottom: 1px solid #212121;
+  color: #000000;
+  border-bottom: 1px solid #000000;
 }
 div.content {
   color: #454545;
@@ -45,6 +45,15 @@ a {
 }
 a:visited {
   color: #941352;
+}
+a.nav_back {
+  color: #BABABA;
+}
+a.nav_back:visited {
+  color: #BABABA;
+}
+a.nav_back:hover {
+  color: #949494;
 }
 div#e404 {
   text-align: center;

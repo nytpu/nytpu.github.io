@@ -3,10 +3,13 @@ include sidebar
 - var production = true
 
 - var year = new Date().getFullYear()
+// TODO: Add subfolder for projects (i.e. cegielski would be at https://www.nytpu.com/projects/cegielski)
 if production
   - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects"}
+  - var nonindex_entries = ['https://www.nytpu.com/cegielski.html']
 else
   - var entries = {"Home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "About": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "Projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects.html"}
+  - var nonindex_entries = ['file:///run/media/alexgentilucci/Storage/projects/nytpu.com/cegielski.html']
 
 doctype html
 html(lang=en)

@@ -1,0 +1,17 @@
+extends include/layout
+
+block prepend head
+  - var current = 'Projects'
+  title Projects
+
+block content
+  h1 Projects
+
+  h2 Personal projects
+  h4 Projects I did by myself
+  p #[a(href=nonindex_entries[0]) Cegielski Gif Archive]
+  p I got other things I just haven't added them to the site yet
+  
+  h2 School/Group projects
+  h4 Projects I did with other people
+  p I got some here too
