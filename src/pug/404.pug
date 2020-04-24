@@ -1,0 +1,35 @@
+doctype html
+html(lang=en)
+  head
+    title 404 Not Found
+
+    meta(charset='utf-8')
+    meta(name='theme-color', content='#ffffff')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='nytpu')
+    meta(name='description', content="nytpu's personal site")
+
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css2?family=Open+Sans')
+    link(rel='stylesheet', type='text/css', href='./css/main.css')
+  body
+    div.sidebar
+      ul
+        li
+          h2 
+            a(href='https://www.nytpu.com/') nytpu.com
+        li
+          a(href='https://www.nytpu.com/') Home
+        li
+          a(href='https://www.nytpu.com/about') About
+        li
+          a(href='https://www.nytpu.com/projects') Projects
+    div.content
+      div#e404
+        h1 Error 404
+        h2 Page not found
+
+      footer
+        //hr
+        p.footer Alex Gentilucci
+
+    script(type='text/javascript', src='./js/main.js')

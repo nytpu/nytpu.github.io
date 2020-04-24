@@ -43,6 +43,10 @@ a {
 a:visited {
   color: #941352;
 }
+div#e404 {
+  text-align: center;
+  margin: 0 auto;
+}
 small {
   font-size: 0.5em;
 }
