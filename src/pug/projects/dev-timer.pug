@@ -8,4 +8,4 @@ block project_content
 
 block footer
   p &#169; #{year}. for additional copyright info see #[a(href=entries['about']) about].
-  p!= "this page viewable in markdown form at <a href='" + projects['photo printing timer'].replace(/^(.*)\/(.*).html$/,"$1/markdown/$2.md") + "'>" + projects['photo printing timer'].replace(/(.*)\/(.*).html$/,"$1/markdown/$2.md") + "</a>"
+  p!= "this page viewable in markdown form at <a href='" + projects['photo printing timer'].replace(/^(.*)\/(.*)$/,"$1/markdown/$2.md") + "'>" + projects['photo printing timer'].replace(/(.*)\/(.*)$/,"$1/markdown/$2.md") + "</a>"
