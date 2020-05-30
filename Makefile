@@ -43,8 +43,6 @@ $(DST_HTML_PRJ_DIR)/%.html: $(SRC_PUG_PRJ_DIR)/%.pug $(SRC_PUG_INC_DIR)/sidebar.
 %.html: $(SRC_PUG_DIR)/%.pug $(SRC_PUG_INC_DIR)/sidebar.pug $(SRC_PUG_INC_DIR)/layout.pug
 	$(PUG) $< --out .
 
-projects.html: $(SRC_PUG_PRJ_DIR)/*.pug
-
 $(DST_MARKDOWN_DIR)/%.md: $(SRC_MARKDOWN_DIR)/%.md
 	cp $< $@
 
