@@ -49,14 +49,24 @@ a:visited {
 a.nav_back {
   color: #BABABA;
 }
-a.nav_back:visited {
+a.nav_back a {
+  color: #525252;
+  text-decoration: none;
+}
+a.nav_back a:visited {
   color: #BABABA;
 }
-a.nav_back:hover {
+a.nav_back a:hover {
   color: #949494;
 }
 div#e404 {
   text-align: center;
+}
+div#e404 a {
+  color: #454545;
+}
+div#e404 a:visited {
+  color: #454545;
 }
 small {
   font-size: 0.5em;

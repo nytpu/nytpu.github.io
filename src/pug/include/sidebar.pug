@@ -3,7 +3,7 @@ mixin sidebar(current)
     ul
       li
         h2 
-          a(href=entries['Home']) nytpu.com
+          a(href=entries['home']) nytpu.com
       each link, name in entries
         li
           a(href=link id=current==name ? 'selected' : '') #{name}

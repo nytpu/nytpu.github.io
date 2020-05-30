@@ -1,0 +1,13 @@
+extends layout
+
+block prepend head
+  - var current = 'projects'
+  link(rel='stylesheet', type='text/css', href='../css/main.css')
+
+block content
+  a.nav_back(href=entries['projects']) &#8617; back
+
+  div.project_content
+    block project_content
+
+  script(type='text/javascript', src='../js/main.js')

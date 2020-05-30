@@ -1,0 +1,17 @@
+extends ../include/project
+
+block prepend head
+  title cegielski gif archive
+
+block project_content
+  h1 cegielski gif archive
+  h2 by MR. CEGIELSKI, INC.
+
+  p Currently unfinished, will keep adding more as I go through his presentations. Click any gif to download.
+
+  - for (var x = 1; x <= 46; x++)
+    a(href='../img/cegielski/'+x+'.gif' download) #[img(src='../img/cegielski/'+x+'.gif' alt="Cegielski gif" style='max-width:100%;')]
+    <br>
+
+block footer
+  p copyright unknown for all images included on this page. no ownership claimed for any image. for additional copyright info see #[a(href=entries['about']) about].

@@ -5,11 +5,11 @@ include sidebar
 - var year = new Date().getFullYear()
 // TODO: Add subfolder for projects (i.e. cegielski would be at https://www.nytpu.com/projects/cegielski)
 if production
-  - var entries = {"Home": "https://www.nytpu.com/", "About": "https://www.nytpu.com/about", "Projects": "https://www.nytpu.com/projects", "Blog": "https://tilde.team/~nytpu/blog/"}
-  - var nonindex_entries = ['https://www.nytpu.com/cegielski']
+  - var entries = {"home": "https://www.nytpu.com/", "about": "https://www.nytpu.com/about", "projects": "https://www.nytpu.com/project-directory", "blog": "https://tilde.team/~nytpu/blog/"}
+  - var projects = {"photo printing timer": "https://www.nytpu.com/projects/dev-timer", "cegielski gif archive": "https://www.nytpu.com/projects/cegielski"}
 else
-  - var entries = {"Home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "About": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "Projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects.html", "Blog": "https://tilde.team/~nytpu/blog/"}
-  - var nonindex_entries = ['file:///run/media/alexgentilucci/Storage/projects/nytpu.com/cegielski.html']
+  - var entries = {"home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "about": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/project-directory.html", "blog": "https://tilde.team/~nytpu/blog/"}
+  - var projects = {"photo printing timer": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects/dev-timer.html", "cegielski gif archive": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects/cegielski.html"}
 
 doctype html
 html(lang=en)
@@ -19,7 +19,7 @@ html(lang=en)
       meta(name='theme-color', content='#ffffff')
       meta(name='viewport', content='width=device-width, initial-scale=1.0')
       meta(name='author', content='nytpu')
-      meta(name='description', content="A site for things and stuff")
+      meta(name='description', content="otiose electronics projects")
 
       link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css2?family=Open+Sans')
       link(rel='stylesheet', type='text/css', href='./css/main.css')
@@ -30,8 +30,8 @@ html(lang=en)
       block content
 
     div.footer
-      // Redefine block footer in extends file to allow chaniging footer content.
+      // Redefine block footer in extends file to allow changing footer content.
       block footer
-        p &#169; #{year}. For additional copyright info see #[a(href=entries['About']) About].
+        p &#169; #{year}. for additional copyright info see #[a(href=entries['about']) about].
 
     script(type='text/javascript', src='./js/main.js')

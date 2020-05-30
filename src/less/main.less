@@ -76,17 +76,31 @@ a {
 a.nav_back {
 	color: @nav-color;
 
-	&:visited {
-		color: @nav-color;
-	}
+	a {
+		color: @link-sidebar-color;
+		text-decoration: none;
 
-	&:hover {
-		color: darken(@nav-color, @nav-color-darken);
+		&:visited {
+			color: @nav-color;
+		}
+
+		&:hover {
+			color: darken(@nav-color, @nav-color-darken);
+
+		}
 	}
 }
 
 div#e404 {
 	text-align: center;
+
+	a {
+		color: @body-text-color;
+
+		&:visited {
+			color: @body-text-color;
+		}
+	}
 }
 
 small {
