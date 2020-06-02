@@ -1,6 +1,248 @@
 <!-- TODO: Add subfolder for projects (i.e. cegielski would be at https://www.nytpu.com/projects/cegielski)--><!DOCTYPE html><html><head><title>dev timer</title><link rel="stylesheet" type="text/css" href="../css/main.css"><meta charset="utf-8"><meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="nytpu"><meta name="description" content="otiose electronics projects"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Open+Sans"><link rel="stylesheet" type="text/css" href="./css/main.css"></head><body><div class="sidebar"><ul><li><h2> <a href="https://www.nytpu.com/">nytpu.com</a></h2></li><li><a href="https://www.nytpu.com/" id="">home</a></li><li><a href="https://www.nytpu.com/about" id="">about</a></li><li><a href="https://www.nytpu.com/project-directory" id="selected">projects</a></li><li><a href="https://tilde.team/~nytpu/blog/" id="">blog</a></li></ul></div><div class="content"><a class="nav_back" href="https://www.nytpu.com/project-directory">&#8617; back</a><div class="project_content"><h1>automated timer for photo printing</h1>
-<p><strong>WARNING:</strong> This project was put together in ~6–7 hours in one day in late
-March using whatever I had lying around, so it can't be referred to as anything
-like <em>high quality</em>, <em>well thought out</em>, or <em>optimised</em>, so be warned.</p>
-<p>Work in Progress</p>
+<p><strong>WARNING:</strong> This project was put together in around five hours in one day in
+late March using whatever I had lying around, so it can't be referred to as
+anything like <em>well engineered</em> or <em>optimised</em>, so be warned.</p>
+<figure>
+<figcaption>See it in action:</figcaption>
+<video style="width:100%;" controls>
+<source src="../video/74926323-5b73-4f23-b4be-27e26e2e2da4.webm" type="video/webm">
+Your browser does not support WebM or the video tag.
+</video>
+</figure>
+<h2>introduction</h2>
+<p>I do a lot of film photography, mostly black &amp; white so I can develop and print
+myself (Color film and prints require a temperature of <a href="https://imaging.kodakalaris.com/sites/uat/files/wysiwyg/pro/chemistry/z131.pdf">37.8°C±0.15°</a>, and I
+don't have any way to reliably temperature control water other than mixing hot
+and cold water and hoping I get it right, so I don't even bother). I have a
+makeshift darkroom in my basement, but the main thing I was lacking was a good
+timer, and I'm particularly prone to mess up exposure time when manually
+turning my enlarger on and off. I saw that they have <a href="https://www.youtube.com/watch?v=Ug9vKaNP3Xo">enlarger timers</a>, but
+they are prohibitively expensive and they would be literally trivial to build.
+I've had 2 of these <a href="https://www.sparkfun.com/products/14236">switchable power relays</a> for a while, and had been
+itching for a project that uses one, and this was the perfect opportunity. I
+decided to expand the scope so that it could time every aspect of printing, for
+the convenience and automation that I clamber for in everything that I do
+often.</p>
+<h2>design</h2>
+<p>I decided that I would make it with an Arduino for ease of slapping it
+together, and I had an LCD going unused that would be perfect for displaying
+time, etc. However, I knew I'd have to turn off the blue-white backlight of the
+LCD when actually printing, but luckily I had a red LED bar graph around. I
+tested it to make sure it was safe printing by just having all of the LEDs on
+it turned on while printing a photo, and it worked. With the relay already
+picked out, I just had to come up with a way to actually be able to customize
+the timers. I settled for a DIP switch to enter in stuff in binary, as I didn't
+have any other way of conveniently getting numbers into an Arduino.</p>
+<h2>bill of materials</h2>
+<p>This is everything I personally used, but feel free to substitute parts,
+because everything here was just stuff I had and wasn't using for anything
+else. I also linked to the first place I found it, not necessarily the best or
+cheapest place to get it.</p>
+<ul>
+<li>1x <a href="https://store.arduino.cc/usa/arduino-uno-rev3">Arduino Uno or bigger (need every single I/O pin on the Uno)</a></li>
+<li>1x Barrel jack power supply with wall plug for Uno</li>
+<li>1x <a href="https://www.newark.com/alcoswitch-te-connectivity/5435640-5/switch-dip-8-position-spst-raised/dp/52K3775">DIP Switch, Rocker, 8 Switches, SPST</a></li>
+<li>1x <a href="https://www.sparkfun.com/products/10097">Serial Enabled LCD</a></li>
+<li>1x <a href="https://www.sparkfun.com/products/9935">10 Segment LED Bar Graph - Red</a></li>
+<li>1x <a href="https://www.sparkfun.com/products/14236">Switchable Power Relay</a></li>
+<li>1x Any normally open SPST momentary pushbutton of your choice</li>
+<li>10x 2.2kΩ Resistors</li>
+<li>1x Solderless breadboard of an appropriate size (at minimum <strong>larger than</strong>
+the <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/400_points_breadboard.jpg/1200px-400_points_breadboard.jpg">normal size</a>)<br>
+OR a solderable protoboard of an appropriate size</li>
+<li>An inordinate number of jumper wires of your choice</li>
+<li>2x Very long jumper wires, long enough to reach from the Arduino to the power
+relay.</li>
+</ul>
+<h2>construction</h2>
+<p>With all of the parts gathered together, I started slapping them together into
+a workable form as quickly and easily as possible. Pulled out the largest
+unused breadboard I had so I didn't have to worry about space, wrote down which
+I/O pins would do what, then realized that I didn't have enough.</p>
+<p>…sigh</p>
+<div class="picture-left">
+<figure>
+<a href="../img/95ce422c-e102-4caf-ac42-8774f9922eca.jpg" target="_blank">
+<img src="../img/95ce422c-e102-4caf-ac42-8774f9922eca.jpg" 
+	title="much terrible wow" alt="terrible wiring setup" />
+</a>
+<figcaption>
+terrible picture for a self-proclaimed photographer.<br/>
+the red and black wires coming in from the bottom go to the power relay.
+</figcaption>
+</figure>
+</div>
+<p>So, I could either order an LED driver or I could just figure out a way to save
+I/O pins. Can I cut one of the bar graph LEDs? No, it'd be nice to keep all ten
+of them, even though they're most of what's eating up my pins. Next step: move
+the LCD Serial from SoftwareSerial to hardware serial pins. There, saved two
+pins, as long as I'm careful to not mess with the LCD serial while uploading
+new sketches. Cut one of the DIP switches, so I have seven switches + one
+select button, saved another, but I need just <em>one</em> more. Is there a way to
+have a TX only serial? I only use TX for the LCD, but using serial RX
+initialized to pin 0 prevents me from using it as a normal pin. After some
+research, I found SendOnlySoftwareSerial, exactly what I was looking for! After
+moving the LCD TX to pin two so it's not on hardware serial, I can then hook up
+the relay control and as many of the DIP switches as I can fit.</p>
+<p>Okay, with the pin issues sorted, I proceeded to wire up everything. After my
+brightness test with the bar graph I decided to slightly dim them with 2.2kΩ
+resistors, because even though they weren't bright enough to mess with the
+print, they were just a little too bright for my taste when looking at them in
+the dark.</p>
+<h2>pin layout</h2>
+<p>I was going to put this in an actual circuit CAD program but that would have
+taken longer than this whole project took to build, and the layout is rather
+simple and can be devised by my pictures and this diagram alone.</p>
+<p>The final pin layout is:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">pin #</th>
+<th style="text-align:left">connected to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:left">One side of power relay</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">DIP switch 1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:left">LCD TX</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:left">DIP switch 2</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:left">DIP switch 3</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:left">DIP switch 4</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:left">DIP switch 5</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:left">DIP switch 6</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:left">DIP switch 7</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:left">Select button</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:left">Bar graph + 1</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:left">Bar graph + 2</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:left">Bar graph + 3</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:left">Bar graph + 4</td>
+</tr>
+<tr>
+<td style="text-align:center">A0</td>
+<td style="text-align:left">Bar graph + 5</td>
+</tr>
+<tr>
+<td style="text-align:center">A1</td>
+<td style="text-align:left">Bar graph + 6</td>
+</tr>
+<tr>
+<td style="text-align:center">A2</td>
+<td style="text-align:left">Bar graph + 7</td>
+</tr>
+<tr>
+<td style="text-align:center">A3</td>
+<td style="text-align:left">Bar graph + 8</td>
+</tr>
+<tr>
+<td style="text-align:center">A4</td>
+<td style="text-align:left">Bar graph + 9</td>
+</tr>
+<tr>
+<td style="text-align:center">A5</td>
+<td style="text-align:left">Bar graph + 10</td>
+</tr>
+</tbody>
+</table>
+<p>Bar graph - 1–10 → 2.2kΩ resistor 1–10 → GND<br>
+Other side of DIP switches 1–7 → GND<br>
+Other side of Select button → GND<br>
+Other side of power relay → GND<br>
+LCD + → 5v<br>
+LCD - → GND</p>
+<h2>programming</h2>
+<p><a href="https://gist.github.com/nytpu/753158379559c04b7728f9998a10473d">Get the code here</a></p>
+<div class="picture-left">
+<figure>
+<a href="../img/30001327-a064-4704-8d2f-91d8761d0ba4.png" target="_blank">
+<img src="../img/30001327-a064-4704-8d2f-91d8761d0ba4.png" 
+	title="i code badly sometimes" alt="very inefficient code" />
+</a>
+<figcaption>
+i'm sure that it's literally impossible to make this code any better.
+</figcaption>
+</figure>
+</div>
+<p>Like with the hardware, I slapped the code together. I originally adapted code
+from another project that I haven't written about yet, where there's a global
+variable for the current program mode, and in the loop it <code>switch</code>es through
+the modes (like a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a>), but it kind of got out of hand
+with the number of modes and I never bothered to refactor it into something
+that makes more sense. It works, and it's not like it needs to be super
+efficient because a few extra ms delay doesn't matter in anything but the
+actual timers themselves.</p>
+<p>The modes are cycled through using the Select button. I actually turn on the
+relay when it is first turned on, to allow for manual switching of the enlarger
+to view negatives, get it sized and focused, etc. I also turn off the LCD for
+that time as well to make it easier to see as the LCD can be quite bright. Then
+I switch into the modes to set the values for each of the timers.</p>
+<p>If the input is set to 0, then it will preserve the last used value (even
+through power cycles thanks to the Arduino's EEPROM!) to allow for easy
+repetition of the same times. All of them are inputted in seconds except for
+the fixing time, as I fix for 4–5 minutes and since I can't use all the DIP
+switches I can only go up to 255 seconds, which means that I can't go higher
+than 4.25 minutes. Fixing doesn't need to any more accurate than the minute for
+me anyway, so I'll leave it like that. I also decided to exclude adding in a
+wash timer, as I don't usually time my washes any more than &quot;it's been over xx
+minutes&quot; and I usually start developing another image while the last one is
+being washed, and I don't want to have to wait around for a wash timer to end.</p>
+<p>After all the timers are set (or preserved) I then turn off the LCD backlight
+and prepare for exposing the frame. Pressing Select again begins exposure, and
+then continue to press Select to move through all the timers, where it then
+loops back to the beginning.</p>
+<h2>still to do</h2>
+<p>I don't really plan on working on this project more, as it works perfectly fine
+for my purposes, but if I do decide to continue, this is what I'll probably be
+doing (in order):</p>
+<ol>
+<li>Replace the small pushbutton for select with a <a href="https://www.jeopardy.com/sites/default/files/styles/article_image_960_/public/files/image//Assets/jeopardy/images/s34_jbuzz/september/signaling-device/sd_buzzer3_840x473.gif">Jeopardy-button–like
+thing</a> so I can click to the next mode without having to have
+someone else press it or drag around the whole contraption with me.</li>
+<li>Add an <a href="https://www.mouser.com/ProductDetail/Maxim-Integrated/MAX7219CNG%2B?qs=1THa7WoU59Gme2Z0GeVXUQ%3D%3D">LED Controller</a> to free up I/O pins to make it easier to
+code and build and so I can use all of the switches on the DIP.</li>
+<li>Turn it into an Arduino shield or PCB so it doesn't look all ugly on a
+breadboard and is much more compact.</li>
+<li>Add a 10-digit keypad (probably could rip it out of an old phone or
+something) to make entering specific values easier.</li>
+</ol>
 </div><script type="text/javascript" src="../js/main.js"></script></div><div class="footer"><!-- Redefine block footer in extends file to allow changing footer content.--><p>&#169; 2020. for additional copyright info see <a href="https://www.nytpu.com/about">about</a>.</p><p>this page viewable in markdown form at <a href='https://www.nytpu.com/projects/markdown/dev-timer.md'>https://www.nytpu.com/projects/markdown/dev-timer.md</a></p></div><script type="text/javascript" src="./js/main.js"></script></body></html>

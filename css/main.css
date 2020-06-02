@@ -71,6 +71,21 @@ div#e404 a:visited {
 small {
   font-size: 0.5em;
 }
+div.picture-left {
+  float: left;
+  width: 40%;
+  overflow: hidden;
+  margin-right: 1em;
+}
+div.picture-left img {
+  width: 100%;
+}
+div.picture-left figure {
+  margin: 10px;
+}
+div.picture-left figure figcaption {
+  font-size: 0.7em;
+}
 .footer {
   width: 100%;
   margin: 7rem auto 1rem;

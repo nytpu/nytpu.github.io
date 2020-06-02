@@ -4,7 +4,7 @@ block prepend head
   title dev timer
 
 block project_content
-  include:markdown-it markdown/dev-timer.md
+  include:markdown-it(html) markdown/dev-timer.md
 
 block footer
   p &#169; #{year}. for additional copyright info see #[a(href=entries['about']) about].
