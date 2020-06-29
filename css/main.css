@@ -99,3 +99,18 @@ div.picture-left figure figcaption {
 .footer a:visited {
   color: #666666;
 }
+blockquote {
+  margin: 0;
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+blockquote p::before {
+  content: '\201C';
+}
+blockquote p::after {
+  content: '\201D';
+}
+blockquote footer {
+  text-indent: 1.5em;
+}
