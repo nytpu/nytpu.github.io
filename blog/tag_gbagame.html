@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport', content='width=device-width, initial-scale=1.0'>
+
+        <link rel="alternate" type="application/rss+xml" title="subscribe to this page..." href="feed.rss" />
+
+        <link rel="stylesheet", type="text/css", href="https://fonts.googleapis.com/css2?family=Open+Sans">
+        <link rel="stylesheet", type="text/css", href="blog.css">
+<title>yatb &mdash; posts tagged "gbagame"</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder"><div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://www.nytpu.com/blog/index.html">yatb</a></h1>
+<div id="description">yet another tech blog</div>
+</div></div></div>
+<div id="divbody"><div class="content">
+<h3><a class="ablack" href="making-a-gba-game-part-2-getting-the-things-onto-the-screen.html">
+making a gba game part 2: getting the things onto the screen
+</a></h3>
+<!-- bashblog_timestamp: #202006031751.49# -->
+<div class="subtitle">June 03, 2020 &mdash; 
+nytpu
+</div>
+<!-- text begin -->
+
+<p>The most up-to-date code is available in the repo: <a href="https://tildegit.org/nytpu/game">https://tildegit.org/nytpu/game</a></p>
+
+<h2>finishing up first-stage character design</h2>
+
+<p>I left off my last post with unfinished sprites and tilemaps. They're still
+unfinished now, but I still needed to finish up the basics and get the player
+character sprite designed before I could continue work on other aspects. I got
+the basic ground and one obstacle for the hub designed, and all I needed was
+the player character before I could get started coding. The problem is, I had
+plenty of ideas for other NPCs in the game, but literally no idea what the
+player character should look like. However, through sheer luck, I was randomly
+doodling in <a href="https://github.com/aseprite/aseprite">Aseprite</a> (my preferred sprite editor, although there's <a href="https://github.com/aseprite/aseprite/issues/977">no
+tilemap editor yet</a>) and drew a strange little outline, and it looked pretty
+good. "Maybe this will be another NPC" I thought. But, after cleaning it up and
+turning the random colors I picked into a palette, it looked really good (at
+least to other pixel art things I've done before). I christened him Schnoz for
+his huge schnoz, and decided that since it's the only character I've actually
+designed so far, that he was going to be the main character. Adding a second
+frame for a simple animation (see! I'm not so inexperienced that I don't know
+about the wonders of XOR for animations). I decided that he looked like a
+dolphin and added a blowhole and changed his colors to be more blue-grey to
+match a dolphin's. I tried to add a tail, but I just couldn't get it to look
+good, and it looks good enough without it anyway. Just ignore the fact that
+since he's a dolphin his schnoz isn't actually a nose at all. </p>
+
+<div class="image">
+<div style="display:inline-block;">
+<img src="https://tildegit.org/nytpu/game/raw/commit/27605ea61bbdcad4e25a6a67258043159168ceca/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
+Original Schnoz
+</div>
+
+<div style="display:inline-block;height:30%;">
+<img src="https://tildegit.org/nytpu/game/raw/branch/art/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
+Schnoz the Dolphin
+</div>
+
+<p></div></p>
+
+<h2>getting it to something the gba understands</h2>
+
+<p>This section title may be a little on the nose, but it's exactly what I needed
+to do next. I have all these <strike>beautiful</strike> okay sprites and
+tilemaps, but how do I get a modern image format into the GBA? Well, there's a
+tool called <a href="http://www.coranac.com/projects/#grit">grit</a>—written by cearn, who also wrote <a href="http://www.coranac.com/projects/tonc/">tonclib</a>—that
+converts images to either <code>.c</code> and <code>.h</code> files or into another of a range of
+binary formats depending on how you want to work with the data in the GBA. I
+already knew that I wanted to use the <a href="https://pineight.com/gba/#gbfs">Game Boy File System</a> because working
+with a bunch of <code>.c</code> files that contain your data is a pain especially if the
+data is compressed and you have to use the GBA BIOS to decompress it, so I
+simply fired up grit and had it convert the images into plain LZ77-compressed
+binary files that I then shoved into a GBFS tarball and added it to the ROM.
+With that good, I managed to get it to read and decompress the files from GBFS
+with relative ease, and now I was finally able to pull out my tonc knowledge
+that I spent all that time learning last blog post. Loading the tilemap data,
+tile data, and character tiles into the right spots, then flipping the right
+switches, and adding basic input methods to scroll the background, and voilà,
+things were displayed and I could look around the map by moving the screen, and
+the first actual version, <a href="https://tildegit.org/nytpu/game/src/tag/v0.1.0">v0.1.0</a>, was released.</p>
+
+<div style="text-align:center;">
+See v0.1.0 in action:
+<video style="width:100%;" controls>
+<source src="https://www.nytpu.com/video/d2d76614-fd97-4e72-85e6-698f475dd460.webm" type="video/webm">
+Your browser does not support WebM or the video tag.
+</video>
+</div>
+
+<h2>creating some semblance of an actual game</h2>
+
+<p>With stuff actually working, I hurriedly got Schnoz displayed and moving around
+with the arrow keys. However, then came a part which was more difficult than I
+thought. I wanted the background to scroll when Schnoz reached the outer ¼ of
+the screen, but for the background to stop scrolling when it reached the edges
+of the map. I still haven't figured out how to do it without using <a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0/src/main.c#L68-L82">these <code>if</code>
+statements</a>. I still think that I might wrap it in it's own function
+somehow, but I deliberately didn't break out anything yet. However, with Schnoz
+now being able to levitate around the screen and ghost through objects,
+<a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0">v0.2.0</a> was completed. The next order of business is to add gravity (easy)
+then add collisions with the terrain (difficult), so we'll see how that goes.</p>
+
+<div style="text-align:center;">
+See v0.2.0 in action:
+<video style="width:100%;" controls>
+<source src="https://www.nytpu.com/video/3959702e-c0fe-49ab-ac80-033eb3d390f0.webm" type="video/webm">
+Your browser does not support WebM or the video tag.
+</video>
+</div>
+
+<p>tags: <a href='tag_gbagame.html'>gbagame</a></p>
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+<h3><a class="ablack" href="making-a-gba-game-part-1-learning-planning-and-designing-sprites.html">
+making a gba game part 1: learning, planning and designing sprites
+</a></h3>
+<!-- bashblog_timestamp: #202005272143.13# -->
+<div class="subtitle">May 27, 2020 &mdash; 
+nytpu
+</div>
+<!-- text begin -->
+
+<p>The most up-to-date code is available in the repo: <a href="https://tildegit.org/nytpu/game">https://tildegit.org/nytpu/game</a></p>
+
+<h2>introduction and choosing a console</h2>
+
+<p>Around November 2019, I decided that I wanted to make a game on a retro
+console! Something that I've wanted to do for a while, but have never actually
+done. I have experience programming older systems, and my first instinct was to
+write it in TMS9900 Assembly on my TI-99/4A, and I've written basic to
+moderately advanced <em>programs</em> on it, but <a href="http://www.mainbyte.com/ti99/hardware/chips/tms9918a.html">looking at the palette</a>, limited
+number of sprites—16 TOTAL, not just on one scanline!—and the <a href="https://archive.org/details/tibook_fundamentals-of-ti994a-assembly-language/page/n63/mode/2up">annoying 256
+bytes of directly addressable ram</a> while <a href="https://archive.org/details/tibook_fundamentals-of-ti994a-assembly-language/page/n65/mode/2up">hiding 16KiB of memory behind the
+VDP</a> makes it <em>really</em> bad for games <a href="https://www.harmlesslion.com/text/Dragons%20Lair%20on%20the%20TI-99_4A.pdf">unless you're a genius programmer and
+hardware hacker with lots of time.</a></p>
+
+<p>With the TI-99/4A out, the <em>obvious</em> next logical system to choose is the Game
+Boy (I only chose it because it was the only other retro system with a flash
+cart I had lying around other than a TI CC-40, which, while being a very
+interesting system, and shows TI's transition from home computing to
+calculators, <a href="https://en.wikipedia.org/wiki/Texas_Instruments_Compact_Computer_40">is not good for games</a>). However, I didn't know a lick of Game
+Boy assembly, and, upon researching, there seems to be no accurate reference
+other than the <a href="https://gbdev.io/pandocs/">GB Pan Docs</a> and not one accurate finished tutorial, nor any
+books other than Nintendo's development manual. I realized that trying to learn
+GB assembly using pure reference manuals while jumping right into making an
+ambitious game, while doable, was probably not a good idea.</p>
+
+<p>I really wanted to write it in assembly, because I'm a crazy person, but the
+only other system I had lying around was a GBA, but I didn't have a flash cart
+for it. I picked up a relatively cheap <a href="https://www.ezflashomega.com/products/EZ-Flash-Omega.html">EZ Flash Omega</a> and I was good on
+that front. Now, armed with a flash cart, I decided that I would lose my dream
+of writing a game in assembly and would just write in C for the GBA, because,
+while I didn't know GBA programming, I know embedded programming and C, so it
+wouldn't take much to learn about the GBA, plus there's an <a href="http://www.coranac.com/tonc/text/toc.htm">excellent
+tutorial</a> that I could run through before actually getting started on the
+game. And, I could always write the functions that needed to be optimized the
+most in assembly still anyway.</p>
+
+<h2>planning and learning about the gba</h2>
+
+<p>With my console picked out, it was now time to formalize my ideas and plans for
+my game (still untitled because I'm bad at that), but first, I needed to learn
+about the GBA, it's capabilities, and what I would be likely able to program on
+it with my ability. Preferably have some practice writing stuff for it too, so
+I could jump right into making it after planning it out.</p>
+
+<p>So, I started reading through the <a href="http://www.coranac.com/tonc/text/toc.htm">tonc tutorial</a>, and ran through each
+section, and tried to make a demo utilizing everything I learned at the end of
+each section ("Basics", "Extended", etc.).</p>
+
+<p>However, I decided to take a little break after "Extended" and get a head start
+on planning, and start working on the graphics for the game. I had tons of
+ideas bouncing around my head and I wanted to write them down, organize them,
+and formalize them before I forgot anything.</p>
+
+<p>I <a href="https://tilde.team/~nytpu/blog/playing-with-the-steam-controller.html">just replayed Squirm</a>, so a lot of the ideas I have (primarily the color
+palettes) are inspired by it. My main first ideas were to have a series of
+zones ("worlds"), that are connected together à la Metroid. The main world is
+to be a hub, that is designed with a primarily greyscale, dark color scheme. It
+is primarily rock themed, and will try to capture a cave-like feel. The primary
+obstacles will be platforming sections around spikes and other physical
+obstacles. All of the other worlds aren't going to connect to each other, and
+will only be connected to the hub, for simplicity of programming, and for
+enforcing some form of linearity.</p>
+
+<p>The next world (although I may rearrange them later) is a "fire" or "lava"
+world (I call it fire), that is obviously orange-red themed. The main surface
+will be sort-of brick themed, but more flat, more akin to lightly textured
+stone. The main obstacle will be lava, possibly flowing or mobile, and will
+have unkillable fireball "enemies" also.</p>
+
+<p>The next world may be a water world, but I may change it to a castle or similar
+themed world. However, the main world that I'm excited for will be the final or
+second-to-final world, and will initially be cheerful and brightly themed, and
+be meadow-like. However, after a short distance, it will slowly transition to a
+brown, dead, corrupted color palette, and will become cavernous, with difficult
+enemies and obstacles.</p>
+
+<p>The rest of the game is yet to be determined, but, as each world will be fairly
+long, and I don't necessarily want the game itself to be very long, these
+worlds may very well be sufficient.</p>
+
+<h2>spriting</h2>
+
+<p>The most current artwork is available on the art branch: <a href="https://tildegit.org/nytpu/game/src/branch/art/art">https://tildegit.org/nytpu/game/src/branch/art/art</a></p>
+
+<p>Now we get to where I am now, where I'm designing the sprites for each world. I
+started out by pulling up <a href="https://coolors.co/">coolors</a> and using the palette generator to find
+a background and foreground color that I liked for the world I'm designing.
+After finding those, I copied the hex codes into the gradient palette generator
+to get a gradient of 6 colors that I then imported back into the normal palette
+generator to touch up. While on the GBA I can have 16 colors per palette, I
+prefer to use fewer colors because I'm not very good at pixel art, and using
+fewer colors makes it easier and helps enforce a style. For the overworld
+palette, I started out generating a nice green palette in the same way I did
+previously, but added a sky-blue background on top of the 6 green colors, and
+added 3 additional "accent" colors, that I'll use for flowers and things. Then
+I duplicated the green palette and messed with the saturation and brightness
+until I got the brown colors I wanted. I then manually changed shades for each
+color, touching them up until it was how I wanted. The only thing is I'm going
+to have to clamp the colors into the GBA's colorspace, so we'll see how that
+goes.</p>
+
+<p><img src="https://tildegit.org/nytpu/game/raw/branch/art/art/overworld/overworld_good_palette.png" alt="Overworld 'Good' Palette" title="can't you just read the title underneath the palette? it says 'overworld good palette'" />
+<img src="https://tildegit.org/nytpu/game/raw/branch/art/art/overworld/overworld_decaying_palette.png" alt="Overworld 'Corrputed' Palette" title="i just went over this last title text, just read under the image or the alt text, you don't need to be here." /></p>
+
+<p>Once I got the palette all generated for the world I was looking on, I then
+started working on the base ground tile (<code>&lt;world&gt;_ground</code> in the repo). I
+decided on using 16x16px tiles because 8x8px was way too constricting. Once I
+got that how I wanted, I copied it into the tilemap 9 times into a square, and
+3 more times into a line. I then added borders how I wanted. For the overworld,
+I don't have to make different tiles for the "good" and "corrupted" variations,
+because I can just toggle the palette in software and it will automatically
+change the colors. However, I will still export the image in both palettes to
+ensure that it is viewable in both variants. I continued working on the other
+tiles in much the same way, and am still working on this process for all of the
+worlds.</p>
+
+<p class="image">
+<img src="https://tildegit.org/nytpu/game/raw/branch/art/art/hub/hub_tilemap_5x.png" title="i'm really proud of the texture in this" />
+work-in-progress tilemap for the hub
+</p>
+
+<h2>the future</h2>
+
+<p>I still have to finish up tiles, and then work on sprites, but I also should
+work on sound and music too. However, the only experience I have with sound is
+with LSDj on the Game Boy, and even then I barely understand GB audio. I get
+the feeling I may be relegated to the digital audio channels for the GBA, but
+even then I probably will work on sound dead last, the most I may do is write
+in dummy functions for actions so sound could be called later. I'm probably
+going to finish up the hub sprites then start coding in core game logic and the
+game loop.</p>
+
+<h2>conclusion</h2>
+
+<p>Hopefully my next post will be significantly shorter, but I had a lot of
+introduction to get through, and a lot to write about because I only decided to
+write a chronological dev log now, when I was previously planning on writing
+one complete overview when I was completely done (although I still plan on
+doing that). Check out the repo linked at the beginning of this post to see my
+current progress, although I don't push until I make a major commit.</p>
+
+<p>tags: <a href='tag_gbagame.html'>gbagame</a></p>
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+</div>
+<div id="footer">
+<h4><a href="https://www.nytpu.com">home</a></h4>
+&#169; 2020. for additional copyright info see <a href="https://www.nytpu.com/about">about</a>.</br>
+this blog is mirrored on gemini at <a href="gemini://tilde.team:1965/~nytpu/blog/">gemini://tilde.team/~nytpu/blog/</a></br>
+it's also mirrored on gopher at <a href="gopher://tilde.team:70/1/~nytpu/blog/">gopher://tilde.team/1/~nytpu/blog/</a></br>
+generated with <a href="https://tildegit.org/team/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+</body></html>
