@@ -2,9 +2,97 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>yatb</title><link>https://www.nytpu.com/blog/index.html</link>
 <description>yet another tech blog</description><language>en</language>
-<lastBuildDate>Fri, 14 Aug 2020 21:15:52 +0000</lastBuildDate>
-<pubDate>Fri, 14 Aug 2020 21:15:52 +0000</pubDate>
+<lastBuildDate>Sun, 16 Aug 2020 16:43:21 -0600</lastBuildDate>
+<pubDate>Sun, 16 Aug 2020 16:43:21 -0600</pubDate>
 <atom:link href="https://www.nytpu.com/blog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+solving look around you&rsquo;s math problems
+</title><description><![CDATA[
+
+<p>some may say that the math problems featured in <a href="https://en.wikipedia.org/wiki/Look_Around_You">look around you</a> are
+impossible, but i am here to attempt to calculate them using the power of
+maths.</p>
+
+<h3>problem one</h3>
+
+<p><strong>question:</strong></p>
+
+<blockquote><p>jean is shorter than brutus, but taller than imhotep. imhotep is taller than
+  jean but shorter than lord scotland. lord scotland is twice the height of
+  jean and brutus combined, but only a tenth of the height of millsy. millsy is
+  at a constant height of x-y. if jean stands exactly 1 nautical mile away from
+  lord scotland, how tall is imhotep?</p></blockquote>
+
+<p><strong>official answer:</strong> imhotep is invisible.</p>
+
+<p>the joke for this problem is that it&rsquo;s obviously contradictory and impossible,
+however, the problem never specifies that there can&rsquo;t be two people with the
+same name.</p>
+
+<p>imhotep &lt; jean 1 &lt; brutus<br/>
+jean 2 &lt; imhotep &lt; lord scotland<br/>
+lord scotland = (jean 1 + brutus) * 2<br/>
+millsy = lord scotland / 10<br/>
+millsy = x-y<br/>
+jean 2 one nautical mile away from lord scotland<br/>
+imhotep = ?</p>
+
+<p>i don&rsquo;t know where to go from here</p>
+
+<h3>problem two</h3>
+
+<p><strong>question:</strong></p>
+
+<blockquote><p>eight ladies go into eight shops at eight o'clock in the morning. each lady
+  wants to buy eight spiders. for each spider, eight spider shoes must be
+  bought.  but, they only have eight pounds between them. with each spider
+  costing eightpence, and each spider shoe costing an eighthpence each, will
+  the ladies have enough change for the bus home, a journey costing eightpence
+  per stop and made up of eight stops.</p></blockquote>
+
+<p><strong>official answer:</strong> the ladies were eightpence short.</p>
+
+<p>this one is fairly simple, it&rsquo;s just a matter of multiplication.</p>
+
+<p>8 ladies * (8 spiders * 0.08 pounds + 8 spider shoes * 0.008 pounds + 8 stops * .08 pounds) =<br/>
+<strong>10.752 pounds</strong></p>
+
+<p>the ladies were 2.76 pounds short.</p>
+
+<h3>problem three</h3>
+
+<p><strong>question:</strong></p>
+
+<blockquote><p>it&rsquo;s the future, and queen elizabeth iii and queen elizabeth iv are
+  going to party held by queen elizabeth v, and are keen to make the right
+  impression, so it&rsquo;s important that they choose their outfits carefully. queen
+  elizabeth iii has forty dresses to choose from, whereas queen elizabeth iv
+  has four thousand. queen elizabeth v has just one dress, but it has the
+  ability to transform itself into the shape of any dress. the night before the
+  party, queen elizabeth iv&rsquo;s handmaiden steals the patterns to queen elizabeth
+  iii&rsquo;s dresses, and working through till dawn, makes forty exact replicas. can
+  you calculate the probability that all three queens will be wearing the same
+  dress at the party, and how many times can queen elizabeth v&rsquo;s dress change
+  before it overheats?</p></blockquote>
+
+<p><strong>official answer:</strong> the party was cancelled</p>
+
+<p>assuming that every dress in elizabeth iii&rsquo;s and elizabeth iv&rsquo;s wardrobes are
+equally likely to be chosen, then each dress in elizabeth iii&rsquo;s collection has
+a 1/40 chance of being warn, while elizabeth iv&rsquo;s dresses have a 1/4040 chance
+after the duplicates are made. however, since queen elizabeth v dress can
+change into <em>any</em> dress, the probably of her wearing any specific dress
+approaches zero. therefore, it can be assumed that the probability of all three
+wearing the same dress is zero. to answer the second part, the video shows that
+elizabeth the v&rsquo;s dress can change fourteen times before overheating.</p>
+
+<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a></p>
+
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/solving-look-around-you-math-problems.html</link>
+<guid>https://www.nytpu.com/blog/./solving-look-around-you-math-problems.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Sun, 16 Aug 2020 16:40:27 -0600</pubDate></item>
 <item><title>
 i got a real server finally!
 </title><description><![CDATA[
@@ -24,11 +112,12 @@ nextcloud on my home server because i&rsquo;ve got 18tib of storage on there in 
 array and making use of it via a cloud would be nice</p>
 
 <p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a></p>
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/i-got-a-real-server-finally.html</link>
 <guid>https://www.nytpu.com/blog/./i-got-a-real-server-finally.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Fri, 14 Aug 2020 21:15:50 +0000</pubDate></item>
+<pubDate>Fri, 14 Aug 2020 21:15:50 -0600</pubDate></item>
 <item><title>
 gemini!
 </title><description><![CDATA[
@@ -70,11 +159,12 @@ write about!</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/gemini.html</link>
 <guid>https://www.nytpu.com/blog/./gemini.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 12 Aug 2020 20:13:10 +0000</pubDate></item>
+<pubDate>Wed, 12 Aug 2020 20:13:10 -0600</pubDate></item>
 <item><title>
 the wicker man analysis(?)
 </title><description><![CDATA[
@@ -109,11 +199,12 @@ again first.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/the-wicker-man-analysis.html</link>
 <guid>https://www.nytpu.com/blog/./the-wicker-man-analysis.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Fri, 26 Jun 2020 01:02:21 +0000</pubDate></item>
+<pubDate>Fri, 26 Jun 2020 01:02:21 -0600</pubDate></item>
 <item><title>
 making a gba game part 2: getting the things onto the screen
 </title><description><![CDATA[
@@ -216,11 +307,12 @@ Your browser does not support WebM or the video tag.
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</link>
 <guid>https://www.nytpu.com/blog/./making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 03 Jun 2020 17:51:49 +0000</pubDate></item>
+<pubDate>Wed, 03 Jun 2020 17:51:49 -0600</pubDate></item>
 <item><title>
 making a gba game part 1: learning, planning and designing sprites
 </title><description><![CDATA[
@@ -376,11 +468,12 @@ current progress, although I don't push until I make a major commit.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/making-a-gba-game-part-1-learning-planning-and-designing-sprites.html</link>
 <guid>https://www.nytpu.com/blog/./making-a-gba-game-part-1-learning-planning-and-designing-sprites.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 27 May 2020 21:43:13 +0000</pubDate></item>
+<pubDate>Wed, 27 May 2020 21:43:13 -0600</pubDate></item>
 <item><title>
 playing with the steam controller
 </title><description><![CDATA[
@@ -491,11 +584,12 @@ something configured <em>exactly</em> how you want it to be.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/playing-with-the-steam-controller.html</link>
 <guid>https://www.nytpu.com/blog/./playing-with-the-steam-controller.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Tue, 26 May 2020 16:18:10 +0000</pubDate></item>
+<pubDate>Tue, 26 May 2020 16:18:10 -0600</pubDate></item>
 <item><title>
 oh yeah, tilde.team!
 </title><description><![CDATA[
@@ -518,9 +612,10 @@ more complete impression or something new to write about.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/oh-yeah-tildeteam.html</link>
 <guid>https://www.nytpu.com/blog/./oh-yeah-tildeteam.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Tue, 19 May 2020 16:34:58 +0000</pubDate></item>
+<pubDate>Tue, 19 May 2020 16:34:58 -0600</pubDate></item>
 </channel></rss>
