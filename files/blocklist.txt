@@ -1,0 +1,13 @@
+! Title: nytpu's misc blocking list
+! Description: blocking elements that were missed by other lists.
+!              to be used with jHide and qutebrowser.
+! Expires: 30 days
+! License: https://creativecommons.org/licenses/by/4.0/
+! Homepage: https://www.nytpu.com/
+
+! shitty "your browser is unsupported" message by canvas even though my browser works fine
+stem.instructure.com##div[class="unsupported_browser"]
+
+old.reddit.com##a[class="premium-banner-outer"]
+old.reddit.com##form[class="premium-banner"]
+
