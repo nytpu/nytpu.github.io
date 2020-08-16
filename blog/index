@@ -1,15 +1,15 @@
 #!/usr/bin/env sh
 printf "20 text/gemini\r\n"
-printf "yatb (yet another tech blog)\r\n\r\n"
+printf "yatb (yet another tech gemlog)\r\n\r\n"
 user=$(stat -c '%U' $0)
-for post in $(ls -t /var/gemini/nytpu.com/blog/*.md); do
+for post in $(ls -t /var/gemini/nytpu.com/phlog/*.md); do
 post=$(basename $post)
-printf "=> /blog/$post $post\r\n" 
+printf "=> /phlog/$post $post\r\n" 
 done
 
 printf "\r\n\r\n"
-printf "this blog is mirrored on gopher at:\r\n"
-printf "=> gopher://nytpu.com/blog/\r\n\r\n"
+printf "this gemlog/phlog/blog is mirrored on gopher at:\r\n"
+printf "=> gopher://nytpu.com/phlog/\r\n\r\n"
 #printf "it's also mirrored on the web at:\r\n"
 #printf "=> https://tilde.team/~$user/blog/\r\n\r\n"
 #printf "=> gemini://tilde.team/~$user/ or go back to my main gemini page\r\n"
