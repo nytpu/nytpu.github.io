@@ -2,9 +2,9 @@
 printf "20 text/gemini\r\n"
 printf "yatb (yet another tech gemlog)\r\n\r\n"
 user=$(stat -c '%U' $0)
-for post in $(ls -t /var/gemini/nytpu.com/phlog/*.md); do
+for post in $(ls -t /var/gemini/nytpu.com/gemlog/*.md); do
 post=$(basename $post)
-printf "=> /phlog/$post $post\r\n" 
+printf "=> /gemlog/$post $post\r\n" 
 done
 
 printf "\r\n\r\n"
