@@ -11,3 +11,6 @@ stem.instructure.com##div[class="unsupported_browser"]
 old.reddit.com##a[class="premium-banner-outer"]
 old.reddit.com##form[class="premium-banner"]
 
+! kind-of needed to sign into school stuff
+@@||accounts.google.com^$document
+
