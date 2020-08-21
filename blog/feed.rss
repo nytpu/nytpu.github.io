@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>yatb</title><link>https://www.nytpu.com/blog/index.html</link>
 <description>yet another tech blog</description><language>en</language>
-<lastBuildDate>Sun, 16 Aug 2020 16:43:21 -0600</lastBuildDate>
-<pubDate>Sun, 16 Aug 2020 16:43:21 -0600</pubDate>
+<lastBuildDate>Thu, 20 Aug 2020 23:12:47 -0600</lastBuildDate>
+<pubDate>Thu, 20 Aug 2020 23:12:47 -0600</pubDate>
 <atom:link href="https://www.nytpu.com/blog/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 solving look around you&rsquo;s math problems
@@ -98,21 +98,21 @@ i got a real server finally!
 </title><description><![CDATA[
 
 <p>i finally got a real vps and migrated my website off of the amalgamation of
-random <a href="https://xkcd.com/37/">ass-services</a> (i&rsquo;m not implying they were bad services) and
-centralize them here. i had my main site (nytpu.com, excluding the blog) on
-github pages (bleugh), my blog on tilde.team, and a bunch of random services
-like nextcloud on my home &ldquo;server&rdquo; (totally not a desktop that doesn&rsquo;t have a
+random-ass services (i&rsquo;m not implying they were bad services) and centralize
+them here. i had my main site (nytpu.com, excluding the blog) on github
+(bleugh) pages, my blog on tilde.team, and a bunch of random services like
+nextcloud on my home &ldquo;server&rdquo; (totally not a desktop that doesn&rsquo;t have a
 monitor) that has the worst uptime and reliability ever. i decided on
-<a href="https://prgmr.com/xen/">prgmr</a> for hosting, for no particular reason. i also took the time to
-migrate over to nginx because i got tired of apache (not that i ever hit a
-point where i noticed the performance losses of apache but i just don&rsquo;t really
-like it) but never got around to switching over, but now since i basically got
-everything set up from scratch i figured i might as well. i <em>might</em> still run
-nextcloud on my home server because i&rsquo;ve got 18tib of storage on there in a zfs
-array and making use of it via a cloud would be nice</p>
+<a href="https://prgmr.com/xen/">prgmr</a> for hosting, for no particular reason other than i&rsquo;d heard of them
+before and they were affordable. i also took the time to migrate over to nginx
+because i got tired of apache (not that i ever hit a point where i noticed the
+performance losses of apache but i just don&rsquo;t really like it) but never got
+around to switching over in the past, but now since i basically got everything
+set up from scratch i figured i might as well. i <em>might</em> still run nextcloud on
+my home server because i&rsquo;ve got 18tib of storage on there in a zfs array and
+making use of it via a cloud would be nice</p>
 
 <p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a></p>
-
 <!-- text end -->
 ]]></description><link>https://www.nytpu.com/blog/i-got-a-real-server-finally.html</link>
 <guid>https://www.nytpu.com/blog/./i-got-a-real-server-finally.html</guid>
