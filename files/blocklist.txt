@@ -24,8 +24,7 @@ www.reddit.com##.native-sidebar-ad
 ##.ad-container
 ##.native-ad-container
 ##.native-sidebar-ad
-||reddit-image.s3.amazonaws.com^
-||alb.reddit.com^
+|alb.reddit.com^
 ! if you respect yourself you shouldn't be paying reddit money anyways
 old.reddit.com/premium
 www.reddit.com/premium
