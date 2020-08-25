@@ -6,18 +6,29 @@
 ! Homepage: https://www.nytpu.com/
 
 ! shitty "your browser is unsupported" message by canvas even though my browser works fine
-stem.instructure.com##div[class="unsupported_browser"]
+stem.instructure.com##.unsupported_browser
 
 ! try to block reddit stuff
 old.reddit.com##.premium-banner-outer
 old.reddit.com##.premium-banner
 old.reddit.com##.ad-container
+old.reddit.com##.native-ad-container
+old.reddit.com##.native-sidebar-ad
 www.reddit.com##.premium-banner-outer
 www.reddit.com##.premium-banner
 www.reddit.com##.ad-container
+www.reddit.com##.native-ad-container
+www.reddit.com##.native-sidebar-ad
 ##.premium-banner-outer
 ##.premium-banner
 ##.ad-container
+##.native-ad-container
+##.native-sidebar-ad
+||reddit-image.s3.amazonaws.com^
+||alb.reddit.com^
+! if you respect yourself you shouldn't be paying reddit money anyways
+old.reddit.com/premium
+www.reddit.com/premium
 
 ! kind-of needed to sign into school stuff
 @@||accounts.google.com^$document
