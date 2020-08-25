@@ -15,6 +15,9 @@ old.reddit.com##.ad-container
 www.reddit.com##.premium-banner-outer
 www.reddit.com##.premium-banner
 www.reddit.com##.ad-container
+##.premium-banner-outer
+##.premium-banner
+##.ad-container
 
 ! kind-of needed to sign into school stuff
 @@||accounts.google.com^$document
