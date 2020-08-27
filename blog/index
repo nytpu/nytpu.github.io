@@ -2,7 +2,7 @@
 printf "20 text/gemini\r\n"
 printf "yatb (yet another tech gemlog)\r\n\r\n"
 user=$(stat -c '%U' $0)
-find /var/gemini/nytpu.com/gemlog/ -type f -name '*.md' -maxdepth 1 -print0 | xargs -0 ls -t | sort | while read file; do
+find /var/gemini/nytpu.com/gemlog/ -type f -name '*.md' -print0 | xargs -0 ls -t | while read file; do
 post=$(basename $file)
 printf "=> /gemlog/$post $post\r\n" 
 done
