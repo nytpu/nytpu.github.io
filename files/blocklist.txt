@@ -5,9 +5,6 @@
 ! License: https://creativecommons.org/licenses/by/4.0/
 ! Homepage: https://www.nytpu.com/
 
-! shitty "your browser is unsupported" message by canvas even though my browser works fine
-stem.instructure.com##.unsupported_browser
-
 ! try to block reddit stuff
 old.reddit.com##.premium-banner-outer
 old.reddit.com##.premium-banner
