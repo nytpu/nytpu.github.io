@@ -1,15 +1,17 @@
 #!/usr/bin/env sh
 printf "20 text/gemini\r\n"
 printf "yatb (yet another tech gemlog)\r\n\r\n"
+printf "this gemlog is outdated, to see my most up-to-date check it out here:"
+printf "=> /gemlog/"
 user=$(stat -c '%U' $0)
-find /var/gemini/nytpu.com/gemlog/ -type f -name '*.md' -print0 | xargs -0 ls -t | while read file; do
+find /var/gemini/nytpu.com/gemlog/old/ -type f -name '*.md' -print0 | xargs -0 ls -t | while read file; do
 post=$(basename $file)
-printf "=> /gemlog/$post $post\r\n" 
+printf "=> /gemlog/old/$post $post\r\n" 
 done
 
-printf "\r\n\r\n"
-printf "this gemlog/phlog/blog is mirrored on gopher at:\r\n"
-printf "=> gopher://nytpu.com/phlog/\r\n\r\n"
+#printf "\r\n\r\n"
+#printf "this gemlog/phlog/blog is mirrored on gopher at:\r\n"
+#printf "=> gopher://nytpu.com/phlog/\r\n\r\n"
 #printf "it's also mirrored on the web at:\r\n"
 #printf "=> https://tilde.team/~$user/blog/\r\n\r\n"
 #printf "=> gemini://tilde.team/~$user/ or go back to my main gemini page\r\n"

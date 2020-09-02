@@ -1,14 +1,15 @@
 #!/usr/bin/env sh
 printf "yatb (yet another tech phlog)\n"
-user=$(stat -c '%U' .)
+printf "\nthis phlog is outdated, to see my most up-to-date check it out on gemini here:\n"
+printf "hgemini://nytpu.com/gemlog/\tURL:gemini://nytpu.com:1965/gemlog/index\tnytpu.com\t1965\n"
 for post in $(ls -t *.md); do
 post=$(basename $post)
 printf "0$post\t/phlog/$post\tnytpu.com\t70\n"
 done
 
-printf "\n\n\n"
-printf "this gemlog/phlog/blog is mirrored on gemini at:\n"
-printf "hgemini://nytpu.com/gemlog/\tURL:gemini://nytpu.com:1965/gemlog/index\tnytpu.com\t1965\n"
+#printf "\n\n\n"
+#printf "this gemlog/phlog/blog is mirrored on gemini at:\n"
+#printf "hgemini://nytpu.com/gemlog/\tURL:gemini://nytpu.com:1965/gemlog/index\tnytpu.com\t1965\n"
 #printf "it's also mirrored on the web at:\n"
 #printf "hhttps://tilde.team/~$user/blog/\tURL:https://tilde.team:443/~$user/blog/\ttilde.team\t443\n"
 #printf "1or go back to my main gopher page\t/~$user/\ttilde.team\t70\n"
