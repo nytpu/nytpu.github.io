@@ -5,11 +5,8 @@ include sidebar
 - var year = new Date().getFullYear()
 // TODO: Add subfolder for projects (i.e. cegielski would be at https://www.nytpu.com/projects/cegielski)
 if production
-  - var entries = {"home": "https://www.nytpu.com/", "about": "https://www.nytpu.com/about", "projects": "https://www.nytpu.com/project-directory", "blog": "https://www.nytpu.com/blog/"}
+  - var entries = {"home": "https://www.nytpu.com/", "about": "https://www.nytpu.com/about", "projects": "https://www.nytpu.com/project-directory"}
   - var projects = {"photo printing timer": "https://www.nytpu.com/projects/dev-timer", "untitled gba game": "https://www.nytpu.com/projects/gbagame", "cegielski gif archive (warning: huge page size)": "https://www.nytpu.com/projects/cegielski"}
-else
-  - var entries = {"home": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/index.html", "about": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/about.html", "projects": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/project-directory.html", "blog": "https://tilde.team/~nytpu/blog/"}
-  - var projects = {"photo printing timer": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects/dev-timer.html", "untitled gba game": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects/gbagame.html", "cegielski gif archive (warning: huge page size)": "file:///run/media/alexgentilucci/Storage/projects/nytpu.com/projects/cegielski.html"}
 
 doctype html
 html(lang=en)
