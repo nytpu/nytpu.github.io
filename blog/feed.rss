@@ -2,9 +2,244 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>yatb</title><link>https://www.nytpu.com/blog/index.html</link>
 <description>yet another tech blog</description><language>en</language>
-<lastBuildDate>Wed, 26 Aug 2020 20:07:52 -0600</lastBuildDate>
-<pubDate>Wed, 26 Aug 2020 20:07:52 -0600</pubDate>
+<lastBuildDate>Wed, 02 Sep 2020 12:01:05 -0600</lastBuildDate>
+<pubDate>Wed, 02 Sep 2020 12:01:05 -0600</pubDate>
 <atom:link href="https://www.nytpu.com/blog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Re: So who/what is swiftmandolin?
+</title><description><![CDATA[
+
+<p><a href="gemini://gemini.circumlunar.space/~swiftmandolin/gemlog/01-9-20-swiftmandolin.gmi">a reply to swiftmandolin&rsquo;s post</a></p>
+
+<h2>random before-post missives:</h2>
+
+<p>I&rsquo;m trying out replying like you would reply on gopher (<a href="gemini://carcosa.net:1965/journal/20200529-some-replies.gmi">although I&rsquo;m not sure
+this is the best way to do it</a>) so we&rsquo;ll see how this goes. Also, I think
+I&rsquo;m going to abandon hosting my blog anywhere else and just focus on a gemlog,
+because while markdown works on everything it doesn&rsquo;t seem to work <em>well</em> for
+anything. Once I roll my own blog utility for just gemini then maybe I&rsquo;ll even
+try to get it on spacewalk considering that I&rsquo;m posting here way more than I
+originally thought I would. As a final aside, I switched my style of writing.
+I&rsquo;m gonna stick with this because having longer passages of text be all
+lowercase just gets hard to read sometimes, but my mastodon posts and shorter
+stuff like that will still be all lowercase because I like the look better
+better for short stuff.</p>
+
+<h2>creating a pseudonym (aka don&rsquo;t make the same mistakes i made)</h2>
+
+<blockquote><p>…finding unique usernames on the internet is getting increasingly difficult…</p></blockquote>
+
+<p>— someone, somewhere</p>
+
+<p>I originally derived &ldquo;nytpu&rdquo; from my name via a <strong>super-secret method</strong> because
+I wanted something that was short and relatively memorable while being random
+enough to be available on most platforms. It seems I was successful at this,
+although it wasn&rsquo;t available on twitter for some miraculous reason, not that I
+really use twitter regularly anyways. The point I&rsquo;m trying to make here is that
+nytpu wasn&rsquo;t originally meant to be a pseudonym that I actively try to keep
+separate from my real identity, and that means I&rsquo;m left with some lingering
+connections to my identity that I have to work around, whereas a pseudonym like
+swiftmandolin&rsquo;s was created with the explicit purpose of being pseudonymous,
+and allows more freedoms because of that.</p>
+
+<h2>becoming private</h2>
+
+<h3>the tug-of-war of privacy</h3>
+
+<blockquote><p>Keeping your privacy isn&rsquo;t an absolute, all-or-nothing, venture.</p></blockquote>
+
+<p>— r/privacy FAQ</p>
+
+<p>The biggest thing about being private is you have to decide the level of
+privacy you want, and how far you&rsquo;re willing to go to reach that level of
+privacy. If you want to maximise your privacy you should just lock yourself in
+a Kaczynski cabin in northern Canada and never touch a computer or interact
+with anyone else. At the opposite end is having wifi-connected cameras and
+amazon echos and/or google homes in every room of your home. If you want to be
+maximally private but still use the internet you <a href="https://github.com/maqp/tfc">can get pretty extreme</a>,
+but the problem is even if you use that no one else except people currently
+being targeted by nation-states use that, so you are left with a near-perfectly
+secure and private communications network with no one to use it with. With a
+more commonplace but anecdotal experience, I have the option of either: 1)
+dropping out of school, or 2) using zoom, so I use zoom and make sure to use
+good SELinux policies and I only use zoom for what I&rsquo;m required for. Another
+example is discord, I would not have any contact with my friends if I didn&rsquo;t
+use it, so I use it just for that, and don&rsquo;t connect it to my identity,
+although if you were really looking then you could probably tell just via who I
+chat with.</p>
+
+<p>These tradeoffs are why imperfect, but still secure services like signal are so
+popular, because they have better privacy, but you don&rsquo;t have to deal with as
+many of these usability tradeoffs so you can get your less tech-literate
+family and friends to use it, <em>and</em> it works with existing networks like SMS so
+you can still contact people you were contacting before. To concisely sum up
+these examples, with privacy you should aim for &ldquo;good enough&rdquo; rather than
+&ldquo;perfect&rdquo;</p>
+
+<h3>my personal privacy</h3>
+
+<blockquote><p>In my opinion, we should begin in total privacy and choose to open what we
+want instead of having to &ldquo;reclaim&rdquo; our privacy. But, c'est la vie.</p></blockquote>
+
+<p>— swiftmandolin</p>
+
+<p>Instead of writing a long paragraph I&rsquo;m just going to enumerate things I do for
+privacy, and there&rsquo;s some security thrown in too because the two sort-of go
+hand-in-hand:</p>
+
+<ol>
+<li>Use Linux instead of Windows or MacOS <del>X</del> (I&rsquo;d do this anyway even
+if it didn&rsquo;t have a privacy benefit)</li>
+<li>Don&rsquo;t use centralized social media… ok I do still use reddit but I don&rsquo;t use
+facebook and only use twitter to follow 2 people</li>
+<li>Don&rsquo;t use google except where I have to for school, and then I use it
+sandboxed in a different browser</li>
+<li>Using a VPN</li>
+<li>Sign emails with PGP, although I can&rsquo;t use encryption because I don&rsquo;t know a
+<em>single</em> other person with pgp that I could encrypt with.</li>
+<li>Using Signal and convincing family to use it</li>
+<li>Using a Pi Hole + local Privoxy + strong adblocker</li>
+<li>Using a degoogled &amp; rooted phone (this gives more user freedom too!)</li>
+<li>Good email hosting that lets you use a custom domain</li>
+<li>Try to secure browser</li>
+</ol>
+
+
+<p>Stuff that I know I should fix but don&rsquo;t:</p>
+
+<ol>
+<li>Using discord — I basically have to if I want to contact most of my irl
+friends</li>
+<li>Using a chromium-based browser (qutebrowser) — I just can&rsquo;t bring myself to
+change it, I love qutebrowser so much</li>
+<li>Logging most of the movies I watch on letterboxd — I don&rsquo;t really know why I
+do this, but I&rsquo;m just obsessed with having a log of all the movies I watch.
+If anyone knows a local program or something self-hosted that does this,
+please email me at alex@nytpu.com!</li>
+<li>Using DuckDuckGo — It isn&rsquo;t perfect for privacy, but no other search
+engine gives me useful results for all the weird and obscure stuff I look
+up. Even DDG doesn&rsquo;t give good results for stuff sometimes and I have to
+pull up google through tor.</li>
+<li>Not using my VPN enough — sometimes I turn it off just because I need the
+fastest download speeds I can get when downloading stuff.</li>
+<li>Tying my name to nytpu — I accidentally did this early on so now I just said
+screw it, it&rsquo;s not even my real name anyways even though people use it irl</li>
+<li>Tying my location to nytpu — I managed to reveal it slowly where I revealed
+bits and pieces until I just said I don&rsquo;t care anymore (just look at my
+photography page on gemini: Rocky Mountain Arsenal, Great Sand Dunes? It&rsquo;s
+not hard to figure out). There are presumably quite a few Alexs who live in
+Colorado, so I&rsquo;m not particularly worried about this either.</li>
+</ol>
+
+
+<h2>concluding things</h2>
+
+<blockquote><p>I couldn&rsquo;t think of a good quote about conclusions so now I&rsquo;m quoting myself</p></blockquote>
+
+<p>— nytpu</p>
+
+<p>In the end, I believe that privacy is a human right, and the fact that you have
+to do this kind of shit to get even a façade of privacy is literally
+disgusting. I&rsquo;m gonna cut myself off here, but somehow have even more to say
+about this, and even just this post got really out of hand, I originally
+intended it to be a quick reply. I&rsquo;ve never really written anything about
+privacy before despite me being so privacy oriented, so I just had a lot that I
+wanted to get out. I didn&rsquo;t even get into free speech stuff yet! Maybe in a
+future post…</p>
+
+<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a>, <a href='tag_replies.html'>replies</a></p>
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/re-so-whowhat-is-swiftmandolin.html</link>
+<guid>https://www.nytpu.com/blog/./re-so-whowhat-is-swiftmandolin.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Wed, 02 Sep 2020 12:01:01 -0600</pubDate></item>
+<item><title>
+the wicker man analysis(?)
+</title><description><![CDATA[
+
+<p>I don't pretend to be a film critic or anything, although I do have a taste for
+<a href="https://www.themoviedb.org/movie/341687-waves-98">obscure</a> or <a href="https://www.themoviedb.org/movie/8327-the-holy-mountain">avant</a>-<a href="https://www.themoviedb.org/movie/4960-synecdoche-new-york">garde</a> films as long as I can get meaning out of
+it.  To get to the point, I just watched <em>The Wicker Man</em>, which a very
+peculiar film because it <em>feels</em> like it should have some deeper meanings and
+themes, like <a href="https://www.themoviedb.org/movie/361292-suspiria"><em>Suspira</em> (2018)</a> or <a href="https://www.themoviedb.org/movie/503919-the-lighthouse"><em>The Lighthouse</em></a>, and yet I can't
+manage to pull anything out of it. It has Christian and Celtic <del>pagan</del>
+heathen symbols, but I can't manage to figure out what they represent, unlike
+in many other films where those have a deeper meaning connected with the rest
+of the themes and plot. I was hoping to have more to say, but this post is
+obviously going to be short because the whole point of it is that I can't
+really say anything else about it other than: 1) it's really frustrating that I
+can't pull any deeper meaning or themes from it even though it feels like I
+should be able to; and 2) this actually is a really good horror film, and I
+still wholeheartedly recommend it. It feels like <em>The Exorcist</em>, kind of, maybe
+it's that they were both made in 1973 and they are both religious themed.</p>
+
+<p>On an unrelated note, I plan on writing an analysis of <em>The Lighthouse</em>
+sometime, because it's an excellent, excellent film, I just have to watch it
+again first.</p>
+
+<p>tags: <a href='tag_analysis.html'>analysis</a>, <a href='tag_miscellaneous.html'>miscellaneous</a></p>
+
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/the-wicker-man-analysis.html</link>
+<guid>https://www.nytpu.com/blog/./the-wicker-man-analysis.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
+<item><title>
+gemini!
+</title><description><![CDATA[
+
+<p>i've been enamoured with the <a href="https://gemini.circumlunar.space/">gemini protocol</a> ever since i've heard of it,
+and am proud to be hosting this blog on gemini and gopher as well as on the web
+(i'm actually the one who <a href="https://tildegit.org/team/bashblog/pulls/2">added gemini support</a> to the bashblog program
+that i use to write this blog). i got that set up a few months ago (as of
+writing this) but haven't really worked much with it other than that. well now,
+i have plenty of time and due to a lack of other projects to be working on i'm
+starting to experiment with gemini a little more.</p>
+
+<p>i found this <a href="gemini://astrobotany.mozz.us/">astrobotany</a> game (which is a port of the botany game i played
+on ~team) and it gave me an idea that i'm <del>going to start</del> working on.
+it's an interactive cgi (in the dynamic page generation sense not the movie
+special effects sense) game thing, and i hope to push the limits of what the
+gemini protocol can do, considering that you can't dynamically update a page
+(which is an <em>objective</em> benefit for everything excluding games). i was
+thinking old school text adventure, that probably wouldn't even be at a <em>Zork</em>
+or <em>Dunnet</em> level but more <em>Colossal Cave Adventure</em>. since the issue isn't the
+back end i was thinking running <a href="https://davidgriffith.gitlab.io/frotz/">frotz</a> (a z-machine interpreter) and
+somehow wrapping gemini around the output, but we'll have to see how that goes
+once i start getting server software up and running.</p>
+
+<p>this whole post was originally meant just to plug gemini some more—because it's
+amazing—but i ended up having some cool ideas that the gemini protocol (might)
+be able to allow that gopher doesn't easily support, and the web is just too
+bloated and it feels too much like actual work instead of a fun projects to get
+anything up and running on there. i hope something of interest comes to
+fruition because not much else has these past few months and i want more to
+write about!</p>
+
+<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a>, <a href='tag_gemini.html'>gemini</a></p>
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/gemini.html</link>
+<guid>https://www.nytpu.com/blog/./gemini.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 <item><title>
 i despise zoom
 </title><description><![CDATA[
@@ -52,95 +287,7 @@ one my my favorite things.</p>
 ]]></description><link>https://www.nytpu.com/blog/i-despise-zoom.html</link>
 <guid>https://www.nytpu.com/blog/./i-despise-zoom.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 26 Aug 2020 20:07:50 -0600</pubDate></item>
-<item><title>
-solving look around you&rsquo;s math problems
-</title><description><![CDATA[
-
-<p>some may say that the math problems featured in <a href="https://en.wikipedia.org/wiki/Look_Around_You">look around you</a> are
-impossible, but i am here to attempt to calculate them using the power of
-maths.</p>
-
-<h3>problem one</h3>
-
-<p><strong>question:</strong></p>
-
-<blockquote><p>jean is shorter than brutus, but taller than imhotep. imhotep is taller than
-  jean but shorter than lord scotland. lord scotland is twice the height of
-  jean and brutus combined, but only a tenth of the height of millsy. millsy is
-  at a constant height of x-y. if jean stands exactly 1 nautical mile away from
-  lord scotland, how tall is imhotep?</p></blockquote>
-
-<p><strong>official answer:</strong> imhotep is invisible.</p>
-
-<p>the joke for this problem is that it&rsquo;s obviously contradictory and impossible,
-however, the problem never specifies that there can&rsquo;t be two people with the
-same name.</p>
-
-<p>imhotep &lt; jean 1 &lt; brutus<br/>
-jean 2 &lt; imhotep &lt; lord scotland<br/>
-lord scotland = (jean 1 + brutus) * 2<br/>
-millsy = lord scotland / 10<br/>
-millsy = x-y<br/>
-jean 2 one nautical mile away from lord scotland<br/>
-imhotep = ?</p>
-
-<p>i don&rsquo;t know where to go from here</p>
-
-<h3>problem two</h3>
-
-<p><strong>question:</strong></p>
-
-<blockquote><p>eight ladies go into eight shops at eight o'clock in the morning. each lady
-  wants to buy eight spiders. for each spider, eight spider shoes must be
-  bought.  but, they only have eight pounds between them. with each spider
-  costing eightpence, and each spider shoe costing an eighthpence each, will
-  the ladies have enough change for the bus home, a journey costing eightpence
-  per stop and made up of eight stops.</p></blockquote>
-
-<p><strong>official answer:</strong> the ladies were eightpence short.</p>
-
-<p>this one is fairly simple, it&rsquo;s just a matter of multiplication.</p>
-
-<p>8 ladies * (8 spiders * 0.08 pounds + 8 spider shoes * 0.008 pounds + 8 stops * .08 pounds) =<br/>
-<strong>10.752 pounds</strong></p>
-
-<p>the ladies were 2.76 pounds short.</p>
-
-<h3>problem three</h3>
-
-<p><strong>question:</strong></p>
-
-<blockquote><p>it&rsquo;s the future, and queen elizabeth iii and queen elizabeth iv are
-  going to party held by queen elizabeth v, and are keen to make the right
-  impression, so it&rsquo;s important that they choose their outfits carefully. queen
-  elizabeth iii has forty dresses to choose from, whereas queen elizabeth iv
-  has four thousand. queen elizabeth v has just one dress, but it has the
-  ability to transform itself into the shape of any dress. the night before the
-  party, queen elizabeth iv&rsquo;s handmaiden steals the patterns to queen elizabeth
-  iii&rsquo;s dresses, and working through till dawn, makes forty exact replicas. can
-  you calculate the probability that all three queens will be wearing the same
-  dress at the party, and how many times can queen elizabeth v&rsquo;s dress change
-  before it overheats?</p></blockquote>
-
-<p><strong>official answer:</strong> the party was cancelled</p>
-
-<p>assuming that every dress in elizabeth iii&rsquo;s and elizabeth iv&rsquo;s wardrobes are
-equally likely to be chosen, then each dress in elizabeth iii&rsquo;s collection has
-a 1/40 chance of being warn, while elizabeth iv&rsquo;s dresses have a 1/4040 chance
-after the duplicates are made. however, since queen elizabeth v dress can
-change into <em>any</em> dress, the probably of her wearing any specific dress
-approaches zero. therefore, it can be assumed that the probability of all three
-wearing the same dress is zero. to answer the second part, the video shows that
-elizabeth the v&rsquo;s dress can change fourteen times before overheating.</p>
-
-<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a></p>
-
-<!-- text end -->
-]]></description><link>https://www.nytpu.com/blog/solving-look-around-you-math-problems.html</link>
-<guid>https://www.nytpu.com/blog/./solving-look-around-you-math-problems.html</guid>
-<dc:creator>nytpu</dc:creator>
-<pubDate>Sun, 16 Aug 2020 16:40:27 -0600</pubDate></item>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 <item><title>
 i got a real server finally!
 </title><description><![CDATA[
@@ -165,202 +312,7 @@ making use of it via a cloud would be nice</p>
 ]]></description><link>https://www.nytpu.com/blog/i-got-a-real-server-finally.html</link>
 <guid>https://www.nytpu.com/blog/./i-got-a-real-server-finally.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Fri, 14 Aug 2020 21:15:50 -0600</pubDate></item>
-<item><title>
-gemini!
-</title><description><![CDATA[
-
-<p>i've been enamoured with the <a href="https://gemini.circumlunar.space/">gemini protocol</a> ever since i've heard of it,
-and am proud to be hosting this blog on gemini and gopher as well as on the web
-(i'm actually the one who <a href="https://tildegit.org/team/bashblog/pulls/2">added gemini support</a> to the bashblog program
-that i use to write this blog). i got that set up a few months ago (as of
-writing this) but haven't really worked much with it other than that. well now,
-i have plenty of time and due to a lack of other projects to be working on i'm
-starting to experiment with gemini a little more.</p>
-
-<p>i found this <a href="gemini://astrobotany.mozz.us/">astrobotany</a> game (which is a port of the botany game i played
-on ~team) and it gave me an idea that i'm <del>going to start</del> working on.
-it's an interactive cgi (in the dynamic page generation sense not the movie
-special effects sense) game thing, and i hope to push the limits of what the
-gemini protocol can do, considering that you can't dynamically update a page
-(which is an <em>objective</em> benefit for everything excluding games). i was
-thinking old school text adventure, that probably wouldn't even be at a <em>Zork</em>
-or <em>Dunnet</em> level but more <em>Colossal Cave Adventure</em>. since the issue isn't the
-back end i was thinking running <a href="https://davidgriffith.gitlab.io/frotz/">frotz</a> (a z-machine interpreter) and
-somehow wrapping gemini around the output, but we'll have to see how that goes
-once i start getting server software up and running.</p>
-
-<p>this whole post was originally meant just to plug gemini some more—because it's
-amazing—but i ended up having some cool ideas that the gemini protocol (might)
-be able to allow that gopher doesn't easily support, and the web is just too
-bloated and it feels too much like actual work instead of a fun projects to get
-anything up and running on there. i hope something of interest comes to
-fruition because not much else has these past few months and i want more to
-write about!</p>
-
-<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a>, <a href='tag_gemini.html'>gemini</a></p>
-
-
-
-
-
-
-
-
-
-<!-- text end -->
-]]></description><link>https://www.nytpu.com/blog/gemini.html</link>
-<guid>https://www.nytpu.com/blog/./gemini.html</guid>
-<dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 12 Aug 2020 20:13:10 -0600</pubDate></item>
-<item><title>
-the wicker man analysis(?)
-</title><description><![CDATA[
-
-<p>I don't pretend to be a film critic or anything, although I do have a taste for
-<a href="https://www.themoviedb.org/movie/341687-waves-98">obscure</a> or <a href="https://www.themoviedb.org/movie/8327-the-holy-mountain">avant</a>-<a href="https://www.themoviedb.org/movie/4960-synecdoche-new-york">garde</a> films as long as I can get meaning out of
-it.  To get to the point, I just watched <em>The Wicker Man</em>, which a very
-peculiar film because it <em>feels</em> like it should have some deeper meanings and
-themes, like <a href="https://www.themoviedb.org/movie/361292-suspiria"><em>Suspira</em> (2018)</a> or <a href="https://www.themoviedb.org/movie/503919-the-lighthouse"><em>The Lighthouse</em></a>, and yet I can't
-manage to pull anything out of it. It has Christian and Celtic <del>pagan</del>
-heathen symbols, but I can't manage to figure out what they represent, unlike
-in many other films where those have a deeper meaning connected with the rest
-of the themes and plot. I was hoping to have more to say, but this post is
-obviously going to be short because the whole point of it is that I can't
-really say anything else about it other than: 1) it's really frustrating that I
-can't pull any deeper meaning or themes from it even though it feels like I
-should be able to; and 2) this actually is a really good horror film, and I
-still wholeheartedly recommend it. It feels like <em>The Exorcist</em>, kind of, maybe
-it's that they were both made in 1973 and they are both religious themed.</p>
-
-<p>On an unrelated note, I plan on writing an analysis of <em>The Lighthouse</em>
-sometime, because it's an excellent, excellent film, I just have to watch it
-again first.</p>
-
-<p>tags: <a href='tag_analysis.html'>analysis</a>, <a href='tag_miscellaneous.html'>miscellaneous</a></p>
-
-
-
-
-
-
-
-
-
-
-<!-- text end -->
-]]></description><link>https://www.nytpu.com/blog/the-wicker-man-analysis.html</link>
-<guid>https://www.nytpu.com/blog/./the-wicker-man-analysis.html</guid>
-<dc:creator>nytpu</dc:creator>
-<pubDate>Fri, 26 Jun 2020 01:02:21 -0600</pubDate></item>
-<item><title>
-making a gba game part 2: getting the things onto the screen
-</title><description><![CDATA[
-
-<p>The most up-to-date code is available in the repo: <a href="https://tildegit.org/nytpu/game">https://tildegit.org/nytpu/game</a></p>
-
-<h2>finishing up first-stage character design</h2>
-
-<p>I left off my last post with unfinished sprites and tilemaps. They're still
-unfinished now, but I still needed to finish up the basics and get the player
-character sprite designed before I could continue work on other aspects. I got
-the basic ground and one obstacle for the hub designed, and all I needed was
-the player character before I could get started coding. The problem is, I had
-plenty of ideas for other NPCs in the game, but literally no idea what the
-player character should look like. However, through sheer luck, I was randomly
-doodling in <a href="https://github.com/aseprite/aseprite">Aseprite</a> (my preferred sprite editor, although there's <a href="https://github.com/aseprite/aseprite/issues/977">no
-tilemap editor yet</a>) and drew a strange little outline, and it looked pretty
-good. "Maybe this will be another NPC" I thought. But, after cleaning it up and
-turning the random colors I picked into a palette, it looked really good (at
-least to other pixel art things I've done before). I christened him Schnoz for
-his huge schnoz, and decided that since it's the only character I've actually
-designed so far, that he was going to be the main character. Adding a second
-frame for a simple animation (see! I'm not so inexperienced that I don't know
-about the wonders of XOR for animations). I decided that he looked like a
-dolphin and added a blowhole and changed his colors to be more blue-grey to
-match a dolphin's. I tried to add a tail, but I just couldn't get it to look
-good, and it looks good enough without it anyway. Just ignore the fact that
-since he's a dolphin his schnoz isn't actually a nose at all. </p>
-
-<div class="image">
-<div style="display:inline-block;">
-<img src="https://tildegit.org/nytpu/game/raw/commit/27605ea61bbdcad4e25a6a67258043159168ceca/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
-Original Schnoz
-</div>
-
-<div style="display:inline-block;height:30%;">
-<img src="https://tildegit.org/nytpu/game/raw/branch/art/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
-Schnoz the Dolphin
-</div>
-
-<p></div></p>
-
-<h2>getting it to something the gba understands</h2>
-
-<p>This section title may be a little on the nose, but it's exactly what I needed
-to do next. I have all these <strike>beautiful</strike> okay sprites and
-tilemaps, but how do I get a modern image format into the GBA? Well, there's a
-tool called <a href="http://www.coranac.com/projects/#grit">grit</a>—written by cearn, who also wrote <a href="http://www.coranac.com/projects/tonc/">tonclib</a>—that
-converts images to either <code>.c</code> and <code>.h</code> files or into another of a range of
-binary formats depending on how you want to work with the data in the GBA. I
-already knew that I wanted to use the <a href="https://pineight.com/gba/#gbfs">Game Boy File System</a> because working
-with a bunch of <code>.c</code> files that contain your data is a pain especially if the
-data is compressed and you have to use the GBA BIOS to decompress it, so I
-simply fired up grit and had it convert the images into plain LZ77-compressed
-binary files that I then shoved into a GBFS tarball and added it to the ROM.
-With that good, I managed to get it to read and decompress the files from GBFS
-with relative ease, and now I was finally able to pull out my tonc knowledge
-that I spent all that time learning last blog post. Loading the tilemap data,
-tile data, and character tiles into the right spots, then flipping the right
-switches, and adding basic input methods to scroll the background, and voilà,
-things were displayed and I could look around the map by moving the screen, and
-the first actual version, <a href="https://tildegit.org/nytpu/game/src/tag/v0.1.0">v0.1.0</a>, was released.</p>
-
-<div style="text-align:center;">
-See v0.1.0 in action:
-<video style="width:100%;" controls>
-<source src="https://www.nytpu.com/video/d2d76614-fd97-4e72-85e6-698f475dd460.webm" type="video/webm">
-Your browser does not support WebM or the video tag.
-</video>
-</div>
-
-<h2>creating some semblance of an actual game</h2>
-
-<p>With stuff actually working, I hurriedly got Schnoz displayed and moving around
-with the arrow keys. However, then came a part which was more difficult than I
-thought. I wanted the background to scroll when Schnoz reached the outer ¼ of
-the screen, but for the background to stop scrolling when it reached the edges
-of the map. I still haven't figured out how to do it without using <a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0/src/main.c#L68-L82">these <code>if</code>
-statements</a>. I still think that I might wrap it in it's own function
-somehow, but I deliberately didn't break out anything yet. However, with Schnoz
-now being able to levitate around the screen and ghost through objects,
-<a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0">v0.2.0</a> was completed. The next order of business is to add gravity (easy)
-then add collisions with the terrain (difficult), so we'll see how that goes.</p>
-
-<div style="text-align:center;">
-See v0.2.0 in action:
-<video style="width:100%;" controls>
-<source src="https://www.nytpu.com/video/3959702e-c0fe-49ab-ac80-033eb3d390f0.webm" type="video/webm">
-Your browser does not support WebM or the video tag.
-</video>
-</div>
-
-<p>tags: <a href='tag_gbagame.html'>gbagame</a></p>
-
-
-
-
-
-
-
-
-
-
-<!-- text end -->
-]]></description><link>https://www.nytpu.com/blog/making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</link>
-<guid>https://www.nytpu.com/blog/./making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</guid>
-<dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 03 Jun 2020 17:51:49 -0600</pubDate></item>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 <item><title>
 making a gba game part 1: learning, planning and designing sprites
 </title><description><![CDATA[
@@ -521,7 +473,143 @@ current progress, although I don't push until I make a major commit.</p>
 ]]></description><link>https://www.nytpu.com/blog/making-a-gba-game-part-1-learning-planning-and-designing-sprites.html</link>
 <guid>https://www.nytpu.com/blog/./making-a-gba-game-part-1-learning-planning-and-designing-sprites.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Wed, 27 May 2020 21:43:13 -0600</pubDate></item>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
+<item><title>
+making a gba game part 2: getting the things onto the screen
+</title><description><![CDATA[
+
+<p>The most up-to-date code is available in the repo: <a href="https://tildegit.org/nytpu/game">https://tildegit.org/nytpu/game</a></p>
+
+<h2>finishing up first-stage character design</h2>
+
+<p>I left off my last post with unfinished sprites and tilemaps. They're still
+unfinished now, but I still needed to finish up the basics and get the player
+character sprite designed before I could continue work on other aspects. I got
+the basic ground and one obstacle for the hub designed, and all I needed was
+the player character before I could get started coding. The problem is, I had
+plenty of ideas for other NPCs in the game, but literally no idea what the
+player character should look like. However, through sheer luck, I was randomly
+doodling in <a href="https://github.com/aseprite/aseprite">Aseprite</a> (my preferred sprite editor, although there's <a href="https://github.com/aseprite/aseprite/issues/977">no
+tilemap editor yet</a>) and drew a strange little outline, and it looked pretty
+good. "Maybe this will be another NPC" I thought. But, after cleaning it up and
+turning the random colors I picked into a palette, it looked really good (at
+least to other pixel art things I've done before). I christened him Schnoz for
+his huge schnoz, and decided that since it's the only character I've actually
+designed so far, that he was going to be the main character. Adding a second
+frame for a simple animation (see! I'm not so inexperienced that I don't know
+about the wonders of XOR for animations). I decided that he looked like a
+dolphin and added a blowhole and changed his colors to be more blue-grey to
+match a dolphin's. I tried to add a tail, but I just couldn't get it to look
+good, and it looks good enough without it anyway. Just ignore the fact that
+since he's a dolphin his schnoz isn't actually a nose at all. </p>
+
+<div class="image">
+<div style="display:inline-block;">
+<img src="https://tildegit.org/nytpu/game/raw/commit/27605ea61bbdcad4e25a6a67258043159168ceca/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
+Original Schnoz
+</div>
+
+<div style="display:inline-block;height:30%;">
+<img src="https://tildegit.org/nytpu/game/raw/branch/art/art/characters/schnoz_5x.gif" style="height:30%;max-width:100%;"/>
+Schnoz the Dolphin
+</div>
+
+<p></div></p>
+
+<h2>getting it to something the gba understands</h2>
+
+<p>This section title may be a little on the nose, but it's exactly what I needed
+to do next. I have all these <strike>beautiful</strike> okay sprites and
+tilemaps, but how do I get a modern image format into the GBA? Well, there's a
+tool called <a href="http://www.coranac.com/projects/#grit">grit</a>—written by cearn, who also wrote <a href="http://www.coranac.com/projects/tonc/">tonclib</a>—that
+converts images to either <code>.c</code> and <code>.h</code> files or into another of a range of
+binary formats depending on how you want to work with the data in the GBA. I
+already knew that I wanted to use the <a href="https://pineight.com/gba/#gbfs">Game Boy File System</a> because working
+with a bunch of <code>.c</code> files that contain your data is a pain especially if the
+data is compressed and you have to use the GBA BIOS to decompress it, so I
+simply fired up grit and had it convert the images into plain LZ77-compressed
+binary files that I then shoved into a GBFS tarball and added it to the ROM.
+With that good, I managed to get it to read and decompress the files from GBFS
+with relative ease, and now I was finally able to pull out my tonc knowledge
+that I spent all that time learning last blog post. Loading the tilemap data,
+tile data, and character tiles into the right spots, then flipping the right
+switches, and adding basic input methods to scroll the background, and voilà,
+things were displayed and I could look around the map by moving the screen, and
+the first actual version, <a href="https://tildegit.org/nytpu/game/src/tag/v0.1.0">v0.1.0</a>, was released.</p>
+
+<div style="text-align:center;">
+See v0.1.0 in action:
+<video style="width:100%;" controls>
+<source src="https://www.nytpu.com/video/d2d76614-fd97-4e72-85e6-698f475dd460.webm" type="video/webm">
+Your browser does not support WebM or the video tag.
+</video>
+</div>
+
+<h2>creating some semblance of an actual game</h2>
+
+<p>With stuff actually working, I hurriedly got Schnoz displayed and moving around
+with the arrow keys. However, then came a part which was more difficult than I
+thought. I wanted the background to scroll when Schnoz reached the outer ¼ of
+the screen, but for the background to stop scrolling when it reached the edges
+of the map. I still haven't figured out how to do it without using <a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0/src/main.c#L68-L82">these <code>if</code>
+statements</a>. I still think that I might wrap it in it's own function
+somehow, but I deliberately didn't break out anything yet. However, with Schnoz
+now being able to levitate around the screen and ghost through objects,
+<a href="https://tildegit.org/nytpu/game/src/tag/v0.2.0">v0.2.0</a> was completed. The next order of business is to add gravity (easy)
+then add collisions with the terrain (difficult), so we'll see how that goes.</p>
+
+<div style="text-align:center;">
+See v0.2.0 in action:
+<video style="width:100%;" controls>
+<source src="https://www.nytpu.com/video/3959702e-c0fe-49ab-ac80-033eb3d390f0.webm" type="video/webm">
+Your browser does not support WebM or the video tag.
+</video>
+</div>
+
+<p>tags: <a href='tag_gbagame.html'>gbagame</a></p>
+
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</link>
+<guid>https://www.nytpu.com/blog/./making-a-gba-game-part-2-getting-the-things-onto-the-screen.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
+<item><title>
+oh yeah, tilde.team!
+</title><description><![CDATA[
+
+<p>I recently got on <a href="https://tilde.team">tilde.team</a>, a wonderful shared Linux system that has an
+amazing community and awesome services. I'm currently writing this blog post
+with their <a href="https://tildegit.org/team/bashblog">bashblog</a> program. I've just gotten signed up, so I'm still
+poking around with the various services and it seems interesting.</p>
+
+<p>I just wanted to create an initial post here, I'll update later when I have a
+more complete impression or something new to write about.</p>
+
+<p>tags: <a href='tag_tildeteam.html'>tildeteam</a>, <a href='tag_miscellaneous.html'>miscellaneous</a></p>
+
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+]]></description><link>https://www.nytpu.com/blog/oh-yeah-tildeteam.html</link>
+<guid>https://www.nytpu.com/blog/./oh-yeah-tildeteam.html</guid>
+<dc:creator>nytpu</dc:creator>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 <item><title>
 playing with the steam controller
 </title><description><![CDATA[
@@ -637,33 +725,93 @@ something configured <em>exactly</em> how you want it to be.</p>
 ]]></description><link>https://www.nytpu.com/blog/playing-with-the-steam-controller.html</link>
 <guid>https://www.nytpu.com/blog/./playing-with-the-steam-controller.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Tue, 26 May 2020 16:18:10 -0600</pubDate></item>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 <item><title>
-oh yeah, tilde.team!
+solving look around you&rsquo;s math problems
 </title><description><![CDATA[
 
-<p>I recently got on <a href="https://tilde.team">tilde.team</a>, a wonderful shared Linux system that has an
-amazing community and awesome services. I'm currently writing this blog post
-with their <a href="https://tildegit.org/team/bashblog">bashblog</a> program. I've just gotten signed up, so I'm still
-poking around with the various services and it seems interesting.</p>
+<p>some may say that the math problems featured in <a href="https://en.wikipedia.org/wiki/Look_Around_You">look around you</a> are
+impossible, but i am here to attempt to calculate them using the power of
+maths.</p>
 
-<p>I just wanted to create an initial post here, I'll update later when I have a
-more complete impression or something new to write about.</p>
+<h3>problem one</h3>
 
-<p>tags: <a href='tag_tildeteam.html'>tildeteam</a>, <a href='tag_miscellaneous.html'>miscellaneous</a></p>
+<p><strong>question:</strong></p>
 
+<blockquote><p>jean is shorter than brutus, but taller than imhotep. imhotep is taller than
+  jean but shorter than lord scotland. lord scotland is twice the height of
+  jean and brutus combined, but only a tenth of the height of millsy. millsy is
+  at a constant height of x-y. if jean stands exactly 1 nautical mile away from
+  lord scotland, how tall is imhotep?</p></blockquote>
 
+<p><strong>official answer:</strong> imhotep is invisible.</p>
 
+<p>the joke for this problem is that it&rsquo;s obviously contradictory and impossible,
+however, the problem never specifies that there can&rsquo;t be two people with the
+same name.</p>
 
+<p>imhotep &lt; jean 1 &lt; brutus<br/>
+jean 2 &lt; imhotep &lt; lord scotland<br/>
+lord scotland = (jean 1 + brutus) * 2<br/>
+millsy = lord scotland / 10<br/>
+millsy = x-y<br/>
+jean 2 one nautical mile away from lord scotland<br/>
+imhotep = ?</p>
 
+<p>i don&rsquo;t know where to go from here</p>
 
+<h3>problem two</h3>
 
+<p><strong>question:</strong></p>
 
+<blockquote><p>eight ladies go into eight shops at eight o'clock in the morning. each lady
+  wants to buy eight spiders. for each spider, eight spider shoes must be
+  bought.  but, they only have eight pounds between them. with each spider
+  costing eightpence, and each spider shoe costing an eighthpence each, will
+  the ladies have enough change for the bus home, a journey costing eightpence
+  per stop and made up of eight stops.</p></blockquote>
 
+<p><strong>official answer:</strong> the ladies were eightpence short.</p>
+
+<p>this one is fairly simple, it&rsquo;s just a matter of multiplication.</p>
+
+<p>8 ladies * (8 spiders * 0.08 pounds + 8 spider shoes * 0.008 pounds + 8 stops * .08 pounds) =<br/>
+<strong>10.752 pounds</strong></p>
+
+<p>the ladies were 2.76 pounds short.</p>
+
+<h3>problem three</h3>
+
+<p><strong>question:</strong></p>
+
+<blockquote><p>it&rsquo;s the future, and queen elizabeth iii and queen elizabeth iv are
+  going to party held by queen elizabeth v, and are keen to make the right
+  impression, so it&rsquo;s important that they choose their outfits carefully. queen
+  elizabeth iii has forty dresses to choose from, whereas queen elizabeth iv
+  has four thousand. queen elizabeth v has just one dress, but it has the
+  ability to transform itself into the shape of any dress. the night before the
+  party, queen elizabeth iv&rsquo;s handmaiden steals the patterns to queen elizabeth
+  iii&rsquo;s dresses, and working through till dawn, makes forty exact replicas. can
+  you calculate the probability that all three queens will be wearing the same
+  dress at the party, and how many times can queen elizabeth v&rsquo;s dress change
+  before it overheats?</p></blockquote>
+
+<p><strong>official answer:</strong> the party was cancelled</p>
+
+<p>assuming that every dress in elizabeth iii&rsquo;s and elizabeth iv&rsquo;s wardrobes are
+equally likely to be chosen, then each dress in elizabeth iii&rsquo;s collection has
+a 1/40 chance of being warn, while elizabeth iv&rsquo;s dresses have a 1/4040 chance
+after the duplicates are made. however, since queen elizabeth v dress can
+change into <em>any</em> dress, the probably of her wearing any specific dress
+approaches zero. therefore, it can be assumed that the probability of all three
+wearing the same dress is zero. to answer the second part, the video shows that
+elizabeth the v&rsquo;s dress can change fourteen times before overheating.</p>
+
+<p>tags: <a href='tag_miscellaneous.html'>miscellaneous</a></p>
 
 <!-- text end -->
-]]></description><link>https://www.nytpu.com/blog/oh-yeah-tildeteam.html</link>
-<guid>https://www.nytpu.com/blog/./oh-yeah-tildeteam.html</guid>
+]]></description><link>https://www.nytpu.com/blog/solving-look-around-you-math-problems.html</link>
+<guid>https://www.nytpu.com/blog/./solving-look-around-you-math-problems.html</guid>
 <dc:creator>nytpu</dc:creator>
-<pubDate>Tue, 19 May 2020 16:34:58 -0600</pubDate></item>
+<pubDate>Wed, 26 Aug 2020 20:32:39 -0600</pubDate></item>
 </channel></rss>
