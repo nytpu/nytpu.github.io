@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>yatb</title><link>https://www.nytpu.com/blog/index.html</link>
 <description>yet another tech blog</description><language>en</language>
-<lastBuildDate>Wed, 02 Sep 2020 12:08:32 -0600</lastBuildDate>
-<pubDate>Wed, 02 Sep 2020 12:08:32 -0600</pubDate>
+<lastBuildDate>Wed, 02 Sep 2020 12:53:48 -0600</lastBuildDate>
+<pubDate>Wed, 02 Sep 2020 12:53:48 -0600</pubDate>
 <atom:link href="https://www.nytpu.com/blog/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 re: so who/what is swiftmandolin?
@@ -101,7 +101,7 @@ sandboxed in a different browser</li>
 <li>Using a Pi Hole + local Privoxy + strong adblocker</li>
 <li>Using a degoogled &amp; rooted phone (this gives more user freedom too!)</li>
 <li>Good email hosting that lets you use a custom domain</li>
-<li>Try to secure browser</li>
+<li>Try to secure &amp; lock down browser</li>
 </ol>
 
 

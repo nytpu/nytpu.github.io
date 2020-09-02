@@ -91,7 +91,7 @@ hand-in-hand:
 7. Using a Pi Hole + local Privoxy + strong adblocker
 8. Using a degoogled & rooted phone (this gives more user freedom too!)
 9. Good email hosting that lets you use a custom domain
-10. Try to secure browser
+10. Try to secure & lock down browser
 
 Stuff that I know I should fix but don't:
 
