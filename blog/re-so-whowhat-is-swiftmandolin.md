@@ -1,8 +1,8 @@
-Re: So who/what is swiftmandolin?
+re: so who/what is swiftmandolin?
 
 [a reply to swiftmandolin's post][backlink]
 
-## random before-post missives:
+## random before-post missives
 
 I'm trying out replying like you would reply on gopher ([although I'm not sure
 this is the best way to do it][1]) so we'll see how this goes. Also, I think
@@ -13,8 +13,8 @@ try to get it on spacewalk considering that I'm posting here way more than I
 originally thought I would. As a final aside, I switched my style of writing.
 I'm gonna stick with this because having longer passages of text be all
 lowercase just gets hard to read sometimes, but my mastodon posts and shorter
-stuff like that will still be all lowercase because I like the look better
-better for short stuff.
+stuff like that will still be all lowercase because I like the look better for
+short stuff.
 
 ## creating a pseudonym (aka don't make the same mistakes i made)
 
