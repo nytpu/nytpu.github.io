@@ -1,0 +1,14 @@
+extends include/layout
+
+block prepend head
+  - var current = 'essays'
+  title essays
+
+block content
+  h1 projects
+
+  h2 essays
+  p These are particularly high quality longform writings I've done, usually taken from my #[a(href="gemini://nytpu.com/gemlog/") gemlog], and put here because I want them to be shared more widely
+  each link, name in essays
+    p
+      a(href=link) #{name}

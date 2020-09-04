@@ -1,0 +1,13 @@
+extends layout
+
+block prepend head
+  - var current = 'essays'
+  link(rel='stylesheet', type='text/css', href='../css/main.css')
+
+block content
+  a.nav_back(href=entries['essays']) &#8617; back
+
+  div.essay_content
+    block essay_content
+
+  script(type='text/javascript', src='../js/main.js')
