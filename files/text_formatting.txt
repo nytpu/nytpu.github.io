@@ -1,0 +1,43 @@
+# formatting stuff in plaintext
+
+you can make up for being in plaintext by using the classic formatting
+substitutes. *stars* for emphasis, **double stars** for extra-extra emphasis,
+_underscores_ for underlining, etc. (hopefully) everybody on the internet has
+seen those before, and even if you haven't then it's still not hard for a
+reader to descern what they mean.
+
+and if you really can't go without real emphasis, if you're using unicode then
+you can use unicode's built-in "typefaces" (be wary that some fonts may not
+support this). you can use this utility to do it: https://yaytext.com/bold-italic/
+𝘸𝘰𝘸 𝘵𝘩𝘦𝘳𝘦'𝘴 𝘭𝘰𝘵'𝘴 𝘰𝘧 𝘧𝘰𝘳𝘮𝘢𝘵𝘵𝘪𝘯𝘨 𝘩𝘦𝘳𝘦 𝘪𝘯 𝘵𝘩𝘪𝘴 𝘴𝘵𝘳𝘪𝘯𝘨!
+𝘄𝗼𝘄 𝘁𝗵𝗲𝗿𝗲'𝘀 𝗹𝗼𝘁'𝘀 𝗼𝗳 𝗳𝗼𝗿𝗺𝗮𝘁𝘁𝗶𝗻𝗴 𝗵𝗲𝗿𝗲 𝗶𝗻 𝘁𝗵𝗶𝘀 𝘀𝘁𝗿𝗶𝗻𝗴!
+
+since i do maths & programming stuff, you need tables. here's a basic table:
++----------+---------+-----------+---+
+| look!    | it's a  | t a b l e | ! |
++----------+---------+-----------+---+
+| content  | content | content   | 1 |
++----------+---------+-----------+---+
+
+you can modify it to look how you want, since you're not forced to use some
+markup language's formatting:
+look!    | it's a  | t a b l e | !
+---------+---------+-----------+--
+content  | content | content   | 1
+
+and if you're using unicode (gemini, etc) then you can even use box-drawing
+chars! (here's a bunch of 'em: https://en.wikipedia.org/wiki/box-drawing_character)
+┌─────────┬─────────┬───────────┬───┐
+│ look!   │ it's a  │ t a b l e │ ! │
+├─────────┼─────────┼───────────┼───┤
+│ content │ content │ content   │ 1 │
+└─────────┴─────────┴───────────┴───┘
+
+or even fancier:
+┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━┓
+┃ look!   ┃ it's a  ┃ t a b l e ┃ ! ┃
+┡━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━┩
+│ content │ content │ content   │ 1 │
+├─────────┼─────────┼───────────┼───┤
+│ content │ content │ content   │ 2 │
+└─────────┴─────────┴───────────┴───┘
