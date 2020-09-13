@@ -2,15 +2,14 @@ yatg (yet another tech gemlog)
 
 => /gemlog/ this gemlog is outdated, to see my most up-to-date check it out here
 
+
 => /gemlog/old/re-so-whowhat-is-swiftmandolin.md re-so-whowhat-is-swiftmandolin.md
-=> /gemlog/old/on-talent.md on-talent.md
 => /gemlog/old/i-despise-zoom.md i-despise-zoom.md
 => /gemlog/old/solving-look-around-you-math-problems.md solving-look-around-you-math-problems.md
-=> /gemlog/old/nosferatu-1922.md nosferatu-1922.md
-=> /gemlog/old/the-wicker-man-analysis.md the-wicker-man-analysis.md
-=> /gemlog/old/making-a-gba-game-part-1-learning-planning-and-designing-sprites.md making-a-gba-game-part-1-learning-planning-and-designing-sprites.md
-=> /gemlog/old/making-a-gba-game-part-2-getting-the-things-onto-the-screen.md making-a-gba-game-part-2-getting-the-things-onto-the-screen.md
-=> /gemlog/old/oh-yeah-tildeteam.md oh-yeah-tildeteam.md
-=> /gemlog/old/playing-with-the-steam-controller.md playing-with-the-steam-controller.md
-=> /gemlog/old/gemini.md gemini.md
 => /gemlog/old/i-got-a-real-server-finally.md i-got-a-real-server-finally.md
+=> /gemlog/old/gemini.md gemini.md
+=> /gemlog/old/the-wicker-man-analysis.md the-wicker-man-analysis.md
+=> /gemlog/old/making-a-gba-game-part-2-getting-the-things-onto-the-screen.md making-a-gba-game-part-2-getting-the-things-onto-the-screen.md
+=> /gemlog/old/making-a-gba-game-part-1-learning-planning-and-designing-sprites.md making-a-gba-game-part-1-learning-planning-and-designing-sprites.md
+=> /gemlog/old/playing-with-the-steam-controller.md playing-with-the-steam-controller.md
+=> /gemlog/old/oh-yeah-tildeteam.md oh-yeah-tildeteam.md
