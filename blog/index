@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 printf "20 text/gemini\r\n"
-printf "yatb (yet another tech gemlog)\r\n\r\n"
+printf "yatg (yet another tech gemlog)\r\n\r\n"
 printf "this gemlog is outdated, to see my most up-to-date check it out here:"
 printf "=> /gemlog/"
 user=$(stat -c '%U' $0)
