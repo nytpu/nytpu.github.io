@@ -31,3 +31,4 @@ www.reddit.com/premium
 
 @@||accounts.google.com^$document
 
+@@||adsbypasser.github.io^
