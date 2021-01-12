@@ -4,7 +4,7 @@
   "Posts": {},
   "Votes": {},
   "Keys": {
-  	  "c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7": ["c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7", 1610430471]
+  	  "c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7": {"Fingerprint": "c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7", "Timestamp": 1610430471
   },
   "Truststates": {},
   "Addresses": {}
