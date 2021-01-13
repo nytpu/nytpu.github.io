@@ -1,7 +1,7 @@
 {
-  "Boards": {},
-  "Threads": { "42c473c875fb0e75ff4d98c91b7dc60bf9a17fd67d08bd15ead21f3f1a1c7c9b": { "BoardFingerprint": "f2c944108971c509c3718a43e8bc77d95d3591746241b6a490e537f00122d98d", "Fingerprint": "42c473c875fb0e75ff4d98c91b7dc60bf9a17fd67d08bd15ead21f3f1a1c7c9b", "Timestamp": 1610431251 } },
-  "Posts": { "42c473c875fb0e75ff4d98c91b7dc60bf9a17fd67d08bd15ead21f3f1a1c7c9b": { "BoardFingerprint": "f2c944108971c509c3718a43e8bc77d95d3591746241b6a490e537f00122d98d", "ThreadFingerprint": "42c473c875fb0e75ff4d98c91b7dc60bf9a17fd67d08bd15ead21f3f1a1c7c9b", "ParentFingerprint": "", "Fingerprint": "V" } },
+  "Boards": { "f2c944108971c509c3718a43e8bc77d95d3591746241b6a490e537f00122d98d": { "Fingerprint": "f2c944108971c509c3718a43e8bc77d95d3591746241b6a490e537f00122d98d", "Timestamp": 1610556816 } },
+  "Threads": {},
+  "Posts": {},
   "Votes": {},
   "Keys": { "c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7": { "Fingerprint": "c537e73ebe6ac6ba685d8f34e2b70c65b0e1b452afc32e37900d642ac71b85a7", "Timestamp": 1610430471 } },
   "Truststates": {},
